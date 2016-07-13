@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="wordstudy.dao.MyWordDao">
+
+  <resultMap type="MyWord" id="MyWordMap">
+    <result column="FAVORS_NO"    property="favorYn"/>
+  </resultMap>
+  
+  <resultMap type="SearchList" id="SearchListMap">
+    <id     column="ANO"    property="ano"/>
+    <id     column="MNO"    property="mno"/>
+    <result column="Mean"  property="mean"/>
+    <result column="Word"  property="word"/>
+    <result column="Asso"  property="asso"/>
+    <result column="A_phot"    property="assophotPath"/>
+    <result column="A_THUM"    property="assothumPath"/>
+    <result column="HINT"    property="hint"/>    
+    <result column="NIC"    property="nick"/>
+    <result column="LIKES"  property="likeNo"/>
+    <result column="HATES"    property="hateNo"/>
+    <result column="PHOT"    property="prophotPath"/>
+  </resultMap>
+  
+  <insert id="insert" parameterType="MyWord">
+    insert into my_word(MNO,ANO)
+    values(#{mno},#{ano})
+  </insert>
+  
+<!--   <update id="update" parameterType="MyWord">
+    update my_word set
+      NIC=#{nick},
+      EMAIL=#{email},
+      PW=#{password},
+      PHOT=#{photo}
+    where MNO=#{no}
+  </update>
+   -->
+   
+  
+  <delete id="delete" parameterType="MyWord">
+    delete from my_word
+    where MNO=#{mno}
+    and ANO=#{ano}
+  </delete>
+
+  <select id="selectList" resultMap="SearchListMap">
+    SELECT W.WORD, M.MEAN, A.ASSO, A.LIKES, A.HATES, A.A_PHOT, R.PHOT, A.FAVOR, R.NIC, A.DATE, A.A_THUM, A.ANO 
+		FROM my_word Y, ASSOS A, WORDS W, MEANS M, MEMBERS R
+		WHERE W.WORD = M.WORD
+		AND Y.ANO = A.ANO
+		AND M.MENO = A.MENO
+		AND A.MNO = R.MNO
+		AND Y.MNO = #{mno}
+		order by ANO DESC
+    	limit #{startIndex}, #{length}
+  </select>
+  
+  <select id="itIsMyWord" parameterType="map" resultType="int">
+    select count(*) 
+    from my_word
+    where MNO=#{mno}
+  </select>
+  <select id="isMyWord" parameterType="map" resultType="int">
+    select count(*) 
+    from my_word
+    where MNO=#{mno} and ANO=#{ano}
+  </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

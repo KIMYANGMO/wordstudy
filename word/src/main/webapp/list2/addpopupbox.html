@@ -1,0 +1,109 @@
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script>
+
+       $(document).ready(function () {
+           function readURL(input) {
+               if (input.files && input.files[0]) {
+                   var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
+                   reader.onload = function (e) {
+                       //파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+                       $('#imgPreview').attr('src', e.target.result);
+                       //이미지 Tag의 SRC속성에 읽어들인 File내용을 지정
+                       //(아래 코드에서 읽어들인 dataURL형식)
+                   }
+                   reader.readAsDataURL(input.files[0]);
+                   //File내용을 읽어 dataURL형식의 문자열로 저장
+               }
+           } //readURL()--
+
+           //file 양식으로 이미지를 선택(값이 변경) 되었을때 처리하는 코드
+           $("#inputFile").change(function () {
+               //alert(this.value); //선택한 이미지 경로 표시
+               readURL(this);
+           });
+       });
+  
+  </script>
+<style>
+div {
+   
+}
+
+#exampleModalLabel {
+font-size: 20px;
+text-align: center;
+
+}
+#imgPreview {
+padding: 10px;
+position: absolute;
+width: 150px;
+height : 130px;
+margin-left: 250px;
+}
+#inputFile {
+padding: 5px;
+height: 140px;
+width: 150px;
+}
+#Means {
+padding : 10px;
+height: 40px;
+width: 420px;
+border: 1px solid gray;
+}
+#imgArea {
+border: 1px solid gray;
+}
+#message-text {
+height: 110px;
+width: 420px;
+border: 1px solid gray;
+}
+#submit {
+height: 50px;
+width: 420px;
+}
+.modal-content {
+width : 450px;
+height: 530px;
+left: 75px;
+top: 70px;
+}
+
+</style>
+
+<!-- header -->
+<div class="modal-header">
+   <button type="button" class="close" data-dismiss="modal"
+      aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+   </button>
+   <h4 class="modal-title" id="exampleModalLabel">연상법 등록하기</h4>
+</div>
+<!-- body -->
+<div class="modal-body">
+   <form action="" method="post" enctype="multipart/form-data" name="">
+      <div class="form-group">
+         <fieldset>
+            <select name="Means" id="Means">
+               <option selected="selected">뜻</option>
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+            </select>
+      </div>
+      <div class="form-group">
+         <textarea class="form-control" id="message-text" placeholder="연상법"></textarea>
+      </div>
+      <div class="form-group" id="imgArea">       
+        <img id="imgPreview" src="" alt="이곳에 선택된 이미지가 표시됩니다."> 
+        <input id="inputFile" type="file"></input>
+      </div>
+   </form> 
+</div>
+<!-- Footer -->
+<div class="modal-footer">
+   <button type="button" class="btn btn-default" id="submit" onclick="location.href='list2.html'">등록하기</button>
+</div>

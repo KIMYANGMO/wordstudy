@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="wordstudy.dao.SearchListDao">
+  <resultMap type="SearchList" id="SearchListMap">
+    <id     column="ANO"    property="ano"/>
+    <id     column="MNO"    property="mno"/>
+    <result column="Mean"  property="mean"/>
+    <result column="Word"  property="word"/>
+    <result column="Asso"  property="asso"/>
+    <result column="A_phot"    property="assophotPath"/>
+    <result column="A_THUM"    property="assothumPath"/>
+    <result column="HINT"    property="hint"/>    
+    <result column="NIC"    property="nick"/>
+    <result column="LIKES"  property="likeNo"/>
+    <result column="HATES"    property="hateNo"/>
+    <result column="PHOT"    property="prophotPath"/>
+  </resultMap>
+    
+  <insert id="insert" parameterType="SearchList">
+    insert into assos(MENO, MNO, ASSO, A_PHOT, HINT, DATE, BEST, LIKES, HATES, FAVOR, A_THUM) 
+    values((select MENO from MEANS where mean=#{mean} and word=#{word}), #{mno}, #{asso}, #{assophotPath}, #{hint}, now(), 'N', 0, 0, 'N', #{assothumPath});    
+  
+  </insert>
+  
+  <insert id="wordAdd" parameterType="SearchList">
+    insert into WORDS(word) 
+    values(#{word});
+  </insert>
+  
+  <insert id="wordMeanAdd" parameterType="SearchList">        
+    insert into MEANS(word,mean) 
+    values(#{word},#{mean});
+  </insert>
+  
+  <insert id="myLOHAdd" parameterType="SearchList">        
+    insert into my_loh(ano, mno) 
+    values((select ano from assos where asso=#{asso}), 
+    	  #{mno});
+    	  
+  </insert>
+  
+  <select id="wordList" resultType="SearchList" parameterType="SearchList">
+    select * from words where word=#{word}    
+  </select>
+  
+  <select id="assoList" resultType="SearchList" parameterType="SearchList">
+    select * from my_LOH where mno=#{mno}
+    and ano=(select ano from assos where asso=#{asso})   
+  </select>
+  
+  <select id="likes" resultType="int" parameterType="SearchList">
+    select likes from my_LOH where mno=#{mno}
+    and ano=(select ano from assos where asso=#{asso})   
+  </select>
+  <select id="hates" resultType="int" parameterType="SearchList">
+    select hates from my_LOH where mno=#{mno}
+    and ano=(select ano from assos where asso=#{asso})   
+  </select>
+  
+  <update id="hatesUpdate" parameterType="SearchList">
+    update assos set hates=hates+1 where asso=#{asso};
+  </update>
+  
+  <update id="likesUpdate" parameterType="SearchList">
+    update assos set likes=likes+1 where asso=#{asso};
+  </update>
+  <update id="likesUpdateAdd" parameterType="SearchList">
+    update my_loh set likes=1 where mno=#{mno}
+    and ano=(select ano from assos where asso=#{asso})
+  </update>
+  <update id="hatesUpdateAdd" parameterType="SearchList">
+    update my_loh set hates=1 where mno=#{mno}
+    and ano=(select ano from assos where asso=#{asso})
+  </update>
+  <!--   
+  <delete id="delete" parameterType="int">
+    delete from BOARDS 
+    where BNO=#{no}
+  </delete> -->
+ 
+  <select id="selectList" resultMap="SearchListMap" parameterType="map">
+    SELECT W.WORD, M.MEAN, A.ASSO, A.LIKES, A.HATES, A.A_PHOT, R.PHOT, A.FAVOR, R.NIC, A.DATE, A.A_THUM, A.ANO 
+		FROM WORDS W, MEANS M, ASSOS A, MEMBERS R
+		WHERE W.WORD = M.WORD
+		AND M.MENO = A.MENO
+		AND A.MNO = R.MNO
+		AND W.WORD = #{word}
+    order by A.LIKES DESC
+  </select>
+  
+  <!-- <select id="selectOne" resultMap="SearchListMap" parameterType="int">
+    select BNO, TITLE, CONTS, VWCNT, CDT 
+    from BOARDS
+    where BNO=#{no}
+  </select> -->
+  
+  <select id="countAll" resultType="int">
+    select count(*) 
+    from ASSOS;
+  </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

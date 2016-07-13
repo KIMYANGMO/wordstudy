@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+#list li {
+	position: relative;
+	top: -260px;
+	margin: 200px 0;
+}
+#search {
+   width: 400px;
+   height: 40.5px;
+   border: 2px black solid;
+   background-color: transparent;
+   background-image: url( "searchbtn.png" );
+   background-position: 99% 2px;
+   background-repeat: no-repeat;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+}
+video#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+#strip {
+   position: absolute;
+   width: 1920px;
+   height: auto;
+}
+#d1 {
+   position: relative;
+   min-width: 960px;
+   width: 100%;
+   height: 246px;
+   padding-bottom: 13%;
+   overflow: hidden;
+}
+#popbutton {
+	border: none;
+	padding: 0 0;
+}
+#logodiv {
+   position: absolute;
+   top: 35px;
+   width: 400px;
+   height: 100px;
+   z-index: 2;
+   right: 50%;
+   margin: 0 -200px 0 0;
+}
+#searchdiv {
+   position: absolute;
+   height: 45px;
+   width: 500px;
+   top: 150px;
+   right: 50%;
+   margin: 0 -250px 0 0;
+   z-index: 2;
+}
+#resultword {
+	position: absolute;
+   width: 100px;
+   height: 100px;
+   top: 50px;
+   right: 50%;
+}
+#resultmean {
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   top: 80px;
+   left: 50%;
+   margin: 0 0 0 30px;
+}
+.cracker {
+      position: absolute;
+      top: 140px;
+      left: 31%;
+}
+
+.profile {
+      position: absolute;
+      top: 100px;
+      left: 25%;
+      
+}
+
+.star {
+    position: absolute;
+    top: 135px;
+    right: 36%;
+}
+
+.like {
+     position: absolute;
+     top: 140px;
+     right: 31%;
+
+}
+
+.hate { 
+    position: absolute;
+    top: 145px;
+    right: 26%;
+}
+
+.line {
+    position: absolute;
+    width: 1000px;
+    top: 35px;
+    right: 50%;
+    margin: 0 -500px 0 0;
+}
+
+.line2 {
+    position: absolute;
+    width: 1000px;
+    top: 255px;
+    right: 50%;
+    margin: 0 -500px 0 0;
+}
+
+.nic {
+    position: relative;
+    font-size: small;
+    top: 75px;
+    left: 31%;
+}
+
+.date {
+    position: relative;
+    font-size: small;
+    color: gray;
+    top: 76px;
+    left: 32%;
+}
+
+.word {
+    position: absolute;
+    top: 79px;
+    left: 31%;
+}    
+
+.mean {
+     position: absolute;
+     font-size: small;
+     top: 105px;
+     left: 38%;
+}
+
+
+.weeks {
+     position: absolute;
+     top: 135px;
+     left: 41%;
+}
+
+.num {
+     position: absolute;
+     top: 135px;
+     right: 30%;
+}
+
+.num2 {
+     position: absolute;
+     top: 135px;
+     right: 25%;
+}
