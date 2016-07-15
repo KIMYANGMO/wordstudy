@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>main</title>
+
+<!-- 실험 -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/style3.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<!-- <link rel="stylesheet" type="text/css" href="../css/list7.css"> -->
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<!-- 여기까지 -->
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- font awesome -->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+<!-- Custom Style -->
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<!--     <link rel="stylesheet" type="text/css" href="../css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/style3.css" />
+    <link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<style>
+#nav:hover a {
+   color: white;
+}
+#logodiv {
+   position: absolute;
+   width: 240px;
+   margin: 0 -120px 0 0;
+   right: 50%;
+   top: 27%;
+}
+
+#searchdiv {
+   position: absolute;
+   height: 45px;
+   width: 500px;
+   top: 48%;
+   right: 50%;
+   margin: 0 -250px 0 0;
+   z-index: 2;
+}
+#search {
+   width: 400px;
+   height: 41px;
+   border: 2px black solid;
+   background-color: transparent;
+   background-image: url( "../images/searchbtn.png" );
+   background-position: 99% 2px;
+   background-repeat: no-repeat;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+}
+video#bgvid {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -100;
+   -ms-transform: translateX(-50%) translateY(-50%);
+   -moz-transform: translateX(-50%) translateY(-50%);
+   -webkit-transform: translateX(-50%) translateY(-50%);
+   transform: translateX(-50%) translateY(-50%);
+   background-size: cover;
+}
+#signindiv {
+   cursor:pointer;
+}
+#signinpop {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin: -300px 0 0 -370px;
+}
+
+body {
+   min-width: 1024px;
+   min-height: 600px;
+}   
+
+
+/*log icon*/
+.menubar{
+ position: absolute;
+  right: 1%;
+  top: 30px;
+  width: auto;
+  height: auto;
+border:none;
+border:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+z-index: 9999;
+}
+
+.menubar ul{
+/* background: rgb(109,109,109); */
+height: 50px;
+width: auto;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: rgb(109,109,109);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(109,109,109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+border:0px;
+/* margin: 50px 0 0 0; */
+position:absolute;
+width:170px;
+z-index:9999; 
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(109,109,109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:170px;
+z-index:9999;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+#current {
+background-color: transparent;
+}
+
+
+.mypage {
+/*   
+  left: 50%;
+  width: 20%;
+  height: 50%;
+  position: relative;
+  margin: -10px 0 0 300px; */
+  width: 150px;
+  height: 50px;
+}
+
+.thumbnail {
+  position: absolute;
+  border-radius : 50%;
+ /*
+  left:50%;
+  margin: -170px -200px 0 200px; */
+}
+
+.imgdiv {
+  position: absolute;
+/*   left:50%;
+  margin: -170px 50px 100px 150px; */
+}
+
+.name {
+  position: absolute;
+/*   left: 50%; */
+  margin: 0 0 0 40px; 
+  width: 80px;
+  color : black;
+}
+
+#received-likes {
+  position: relative;
+  left: 50%;
+  margin: 0 150px 0 0;
+}
+
+.mainicon {
+  position: absolute;
+  left: 50%;
+  margin: 100px 0 0 -65px;
+}
+
+.likecount {
+  position: absolute;
+  left: 50%;
+  margin: 125px 0 0 -78px;
+}
+
+.statcount {
+   position: absolute;
+  left: 50%;
+  margin: 101px 0 0 -35px;
+}
+.headerdiv {
+	width: 100%;
+	height: 150px;
+}
+.withdrawal {
+  position:absolute;
+  left : 50%;
+  margin: 30px 0 0 -190px;
+}
+.change {
+  display: inline-block;
+}
+#dialog {
+  z-index: 9999;
+}
+.settingpro {
+	border-radius: 100%;
+}
+
+
+#inputfiles {
+	position: absolute;
+	top: 130px;
+	left: 225px;
+	width: 1px !important;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	cursor: pointer;
+}
+
+
+
+
+/* 실험 */
+#strip {
+   position: absolute;
+   width: 1920px;
+   height: auto;
+}
+#d1 {
+   position: relative;
+   min-width: 960px;
+   width: 100%;
+   height: 246px;
+   padding-bottom: 13%;
+   overflow: hidden;
+}
+#logodiv {
+   position: absolute;
+   top: 35px;
+   width: 400px;
+   height: 100px;
+   z-index: 1;
+   right: 50%;
+   margin: 0 -200px 0 0;
+}
+#topsearchdiv {
+   position: absolute;
+   height: 45px;
+   width: 500px;
+   top: 150px;
+   right: 50%;
+   margin: 0 -250px 0 0;
+   z-index: 1;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+	<div id="d1">
+   <span id="threediv">
+   <nav>
+       <ul>
+         <li><a href="../add/addasso.html" class="newfile-btn"><i></i><img src="../images/newfile.png" width="70"/><br></br><font size='3'>연상법 등록</font></a></li>
+       <li><a href="../learn/learnchoice.html" class="study-btn"><i></i><img src="../images/pencil.png" width="70"/><br></br><font size='3'>연상법 학습</font></a></li>
+       <li><a href="../myword/myword.html" class="profile-btn"><i></i><img src="../images/pro.png" width="70"/><br></br><font size='3'>나의 단어장</font></a></li>
+       </ul>
+    </nav>
+    </span>
+   <div id="logodiv" align="center"><a href="../main/main.html"><img src="../images/logo.png" id="logo"/></a></div>
+   <div id="topsearchdiv" align="center">
+   <form method="get" action="../list/list.html">
+   <input id="topsearch" name="word" type="text" value="search"  onfocus="this.value=''" onblur="if(this.value =='') this.value='search';"/>
+   </form>
+   </div>
+
+   <video autoplay loop poster="../images/strip.jpg" id="bgvid">
+     <source src="../images/search_back.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+
+<!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
+
+</div>
+ 
+	<div class="modal" id="myModal" aria-hidden="true"
+		style="display: none; z-index: 1050;">
+		<span id="signinpop">
+			<div class="modal-dialog modal-lg">
+
+				<div class="modal-body">
+					<section>
+						<div id="container_demo">
+							<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+							<a class="hiddenanchor" id="toregister"></a> 
+							<a class="hiddenanchor" id="tologin"></a>
+							<div id="wrapper">
+								<div id="login" class="animate form">
+									
+									<form autocomplete="on" method='post'>
+										<h1>Log in</h1>
+										<p>
+											<label for="username" class="uname" data-icon="u">Your email</label>
+											<input id="email" name="email" required="required" type="text"
+												placeholder="mymail@mail.com" />
+										</p>
+										<p>
+											<label for="password" class="youpasswd" data-icon="p"> Your password</label>
+											<input id="password" name="password" required="required" type="password"
+											    placeholder="eg. X8df!90EO" onKeyPress="if (event.keyCode==13){$('#loginbtn').click();event.returnValue=false}" />
+											    
+										</p>
+										<p class="keeplogin">
+											<input type="checkbox" name="loginkeeping" id="loginkeeping"
+												value="loginkeeping" />
+										    <label for="loginkeeping">Keep me logged in</label>
+										</p>
+									<p class="login button">
+										<input  id="loginbtn" name="loginbtn"  value="LOGIN" style="text-align:center;" readonly />
+									</p>
+									<p class="change_link">
+										Not a member yet ? <a href="#toregister" class="to_register">Join us</a>
+									</p>
+									</form>
+								</div>
+
+
+								<div id="register" class="animate form">
+									<form name="regi" autocomplete="on">
+										<h1>Sign up</h1>
+										<p>
+											<label for="usernamesignup" class="uname" data-icon="u">Your
+												username</label> <input id="usernamesignup" name="usernamesignup"
+												required="required" type="text"
+												placeholder="mysuperusername690" />
+										</p>
+										<p>
+											<label for="emailsignup" class="youmail" data-icon="e">
+												Your email</label> <input id="emailsignup" name="emailsignup"
+												required="required" type="email"
+												placeholder="mysupermail@mail.com" />
+												<font name="mcheck" size="2" color="red"></font> 
+												<font name="mchecked" size="2" color="blue"></font> 
+										</p>
+										<p>
+											<label for="passwordsignup" class="youpasswd" data-icon="p">Your
+												password </label> 
+												<input id="passwordsignup" name="passwordsignup"
+												required="required" type="password"
+												placeholder="eg. X8df!90EO" />
+												<font name="pcheck" size="2" color="red"></font> 
+												<font name="pchecked" size="2" color="blue"></font> 
+										</p>
+										<p>
+											<label for="passwordsignup_confirm" class="youpasswd"
+												data-icon="p">Please confirm your password </label>
+												 <input	id="passwordsignup_confirm" name="passwordsignup_confirm"
+												required="required" type="password"
+												placeholder="eg. X8df!90EO" />
+												<font name="check" size="2" color="red"></font> 
+												<font name="checked" size="2" color="blue"></font> 
+										</p>
+										<p class="signin button">
+											<input id="signinbtn" value="Sign up" style="text-align:center;" readonly/>
+										</p>
+										<p class="change_link">
+											Already a member ? <a href="#tologin" class="to_register">Go and log in </a>
+										</p>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</span>
+	</div>
+	
+	
+	
+	
+	<!-- 설정 팝업! -->
+	
+	
+	<div class="modal" id="setting" aria-hidden="true"
+		style="display: none; z-index: 1050;">
+		<span id="signinpop">
+			<div class="modal-dialog modal-lg">
+
+				<div class="modal-body">
+					<section>
+						<div id="container_demo">
+							<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+							<a class="hiddenanchor" id="tosettings"></a>
+							<a class="hiddenanchor" id="todelete"></a>
+							<div id="wrapper">
+								
+								<div id="settings" class="animate form">
+									
+									<form id="settingForm" name="mysetting" autocomplete="on" method='post'>
+									<div id=pAndndiv>
+										<!-- <img src="../images/profile.png" id="imgPreview" class="settingpro" width="100" height="100">
+										<h3 align="center">김현지  <input id="inputfiles" type="file" name="photo"></input><img class="cameraimg" src="../images/cameraicon.png" width="30" height="30"></h3><br> -->
+									</div>
+										<h1></h1>
+										
+									     	<p>
+											<label for="useremail" class="youmail" data-icon="e">이메일</label>
+											<input id="setemail" name="email" required="required" type="text" readonly="readonly"/>
+										</p>
+										
+										<p>
+											<label for="username" class="uname" data-icon="u">닉네임 변경</label>
+											<input id="nickCheck" name="nickCheck" type="hidden"/>
+											<input id="nickBefore" name="nickBefore" type="hidden"/>
+											
+											<input id="setnick" name="nick" required="required" type="text"/>
+											    <font name="ncheck" size="2" color="red"></font> <br>
+										</p>
+										
+										<p>
+											<label for="password" class="youpasswd" data-icon="p">비밀번호 변경</label>
+											<input id="localpassword" name="password" required="required" type="password"
+											    placeholder="기존 비밀번호" />
+											
+										</p>
+										
+										<p>
+											<input id="setpassword" name="password"  required="required" type="password"
+											    placeholder="새 비밀번호" />
+											<font name="prcheck" size="2" color="red"></font> <br>
+										</p>
+										
+										<p>
+											<input id="setpassword_confirm" name="password" required="required" type="password"
+											    placeholder="새 비밀번호 확인" />
+											    <font name="pcheck" size="2" color="red"></font> 
+										</p>
+									<p class="change_link" style="margin-top: 80px;">
+										<a href="#todelete" class="to_register" style="width:78px;">회원탈퇴 </a>
+									</p>
+									<p class="change button">
+										<input  id="change" name="changebtn" value="변경" style="text-align:center;" readonly />
+									</p>
+									</form>
+							</div>
+							
+							
+							<div id="delete" class="animate form">
+									<form name="deletecheck" autocomplete="on">
+										<h1>회원탈퇴</h1>
+										<p>
+											<label for="deletepassword" class="youpasswd" data-icon="p">본인 확인을 위하여 비밀번호를 입력해 주세요</label> 
+											<input id="mailCheck" name="mailCheck" type="hidden"/>
+												<input id="deletepassword" name="deletepassword"
+												required="required" type="password"/>
+										</p>
+										<p class="delete button">
+											<input id="deletebtn" value="탈퇴" style="text-align:center;" readonly/>
+										</p>
+										<p class="change_link">
+											<a href="#tosettings" class="to_register">설정</a>
+										</p>
+									</form>
+								</div>
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</span>
+	</div>
+	
+<div id="dialog" title="회원정보변경"> <img src="../images/ㅋㅋㅋ.jpg" width="180" height="100"/>
+  <p>로그인 실패다</p>
+</div>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+   <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    
+    
+  <!--  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+   
+
+
+
+
+<script type="text/javascript">
+$(function() {
+    $(document).on('change','#inputfiles', function(){
+        readURL(this);
+    });
+});
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+            $('#imgPreview').attr('src', e.target.result);
+        }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+}
+</script>
+
+<script>
+function loadPhoto() {	
+	$.getJSON("../ajax/member/list.do", function(result) {
+		var headerdiv = $('#d1');
+		var pAndndiv = $('#pAndndiv');
+		var list = result.list;
+		
+		$("<div class='menubar'>").html("<ul>" + 
+				"<li><a href='#' id='current'><div class='mypage'><div class='imgdiv'><img class='thumbnail' src='" + list[0].photo + "' width='45' height='45'></div><div class='name'><font size='3'>" + list[0].nick + "</font></div></div></a>" + 
+				"<ul><li><a href='location:;'>받은좋아요 <img src='../images/mainlikewhite.png' width='20px' height='20px'><font align='right'> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>" + 
+				"<li><a data-toggle=\"modal\" href='#setting'>설정</a></li><li><a href='../auth/logout.do'>로그아웃</a></li></ul>" +
+				"</li></ul>").appendTo(headerdiv);
+		$('#sign').css("display", "none");
+		
+		$("<img src='" + list[0].photo + "' id='imgPreview' class='settingpro' width='100' height='100'>" +
+			"<h3 align='center'>" + list[0].nick + "<input id='inputfiles' type='file' name='photo'></input><img class='cameraimg' src='../images/cameraicon.png' width='30' height='30'></h3><br>").appendTo(pAndndiv);
+	})
+}
+</script>
+
+<!--  설정 팝업 -->
+<script>
+ $( document ).ready(function() {
+}); 
+
+$.getJSON("../auth/log.do", function(result) {
+		if (result.status == "success"){
+			var member = result.member;
+			$("#setemail").val(member.email);
+			$("#setnick").val(member.nick);
+			$("#nickBefore").val(member.nick);
+		} else if (result.status == "failure"){
+			
+		}
+	});
+	</script>
+	
+	
+	
+<!-- 닉네임 실시간으로 중복체크 해주기 -->	
+<script>
+$(function(){
+	$('#setnick').keyup(function() {
+	
+	var member={"nick":""};
+
+	 $.ajax({
+		  type: 'POST',
+		  url: "../ajax/member/detailByNick.do",
+		  data:  {
+				nick : $("#setnick").val()
+			},
+		  success: function(result) {
+			  if (result.nick != null) {
+					member.nick = result.nick;
+			  }
+			},
+		  dataType: "json",
+		  async:false
+		});
+
+    if(member.nick != "") {	
+    		$("#nickCheck").val("1");
+			$('font[name=ncheck]').html("중복된 닉네임 입니다.");
+			$('font[name=ncheck]').css("color","red");
+	} else if (member.nick == "") {
+			$("#nickCheck").val("0");
+			$('font[name=ncheck]').html("사용 가능한 닉네임 입니다.");
+			$('font[name=ncheck]').css("color","blue");
+	}
+	});
+});  
+</script>
+
+   
+<!-- 설정 팝업에서 변경하는 과정!!! -->
+<script>
+var regexPassword =  /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,16}$/;
+
+	$("#change").click(function(event) {
+		
+		 var checkValue = $("#nickCheck").val();
+		 var nickBefore = $("#nickBefore").val();
+
+		 
+		 if((checkValue != "") && (nickBefore != "")){
+			 
+			 if((checkValue == "1") && (nickBefore != $("#setnick").val())){
+				window.alert("닉네임이 중복 되었습니다."); 
+				document.mysetting.setnick.focus();
+			}else if((checkValue == "0") && (nickBefore != $("#setnick").val())){
+				
+				$.ajax({
+					  type: 'POST',
+					  url: "../ajax/member/nickupdate.do",
+					  data:  {
+							nick : $("#setnick").val(),
+							email : $("#setemail").val()
+						},
+					  success: function(result) {
+						   if (result.status == "success") {
+							   $("#setnick").val(result.nick);
+							   $("#nickCheck").val("");
+							   $("#nickBefore").val("result.nick");
+							   //member.nick = result.nick;
+							   if(!($("#setpassword").val() != "" && $("#setpassword_confirm").val() != "" && $("#localpassword").val() != "")){
+							   		window.alert("설정을 변경하였습니다."); 
+							   }
+						   }else if(result.status == "failure"){
+							   window.alert("설정이 변경되지 않았습니다.");
+							   $("#setnick").val(result.nick);
+						   }
+						   
+						if(result.nick != "") {	
+								$('font[name=ncheck]').html("");
+						} else if (result.nick == "") {
+								$('font[name=ncheck]').html("");
+						}
+						
+						},
+					  dataType: "json",
+					  async:false
+					});
+			} 
+		 }	
+		 
+		 if($("#setpassword").val() != "" && $("#setpassword_confirm").val() != "" && $("#localpassword").val() != ""){
+			
+			if($("#setpassword").val() != $("#setpassword_confirm").val()) {
+				   $("#localpassword").val("");
+				   $("#setpassword").val("");
+				   $("#setpassword_confirm").val("");
+				window.alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+				document.mysetting.setpassword_confirm.focus();
+			}else if(!$('#setpassword').val().match(regexPassword)) {
+				window.alert("비밀번호 형식에 맞지 않습니다.");
+				document.mysetting.setpassword.focus();
+			}else{
+				 $.ajax({
+					  type: 'POST',
+					  url: "../ajax/member/pwdupdate.do",
+					  data:  {
+							email : $("#setemail").val(),
+							localpassword : $("#localpassword").val(),
+							newPass  : $("#setpassword").val()
+						},
+					  success: function(result) {
+						   if (result.status == "success") {
+							   $("#localpassword").val("");
+							   $("#setpassword").val("");
+							   $("#setpassword_confirm").val("");
+							   window.alert("설정을 변경하였습니다."); 
+						   }else if(result.status == "failure"){
+							   $("#localpassword").val("");
+							   $("#setpassword").val("");
+							   $("#setpassword_confirm").val("");
+							   window.alert("비밀번호가 일치 하지 않습니다."); 
+							   document.mysetting.setpassword_confirm.focus();
+						   }
+						   
+						if(result.password != "") {	
+								$('font[name=pcheck]').html("");
+						} else if (result.newPass == "") {
+								$('font[name=pcheck]').html("");
+						}
+						  
+						},
+					  dataType: "json",
+					  async:false
+					});
+
+				}
+			
+		}
+
+		 var fd = new FormData($("#settingForm")[0]);
+     $.ajax({
+    	 	 url:"../ajax/member/photupdate.do",
+    	 	 type:"POST",
+    	 	 data: fd,
+    	 	 async:true,
+    	 	 cache:false,
+    	 	 contentType:false,
+    	 	 processData:false,
+         success: function(result) {
+     			 if (result.status == "success") {
+     				 window.location.reload(); 
+     			 } else if (result.status == "failure") {
+     				 window.alert("설정 변경에 실패하였습니다.");
+     				 window.location.reload();
+     			 } else if (result.status == "noChange") {
+     			   window.location.reload();
+     			 }
+         }
+       });
+	});
+	
+	<!-- 설정팝업에서 회원 탈퇴 -->
+	$("#deletebtn").click(function(event) {
+		
+		 $.ajax({
+			  type: 'POST',
+			  url: "../ajax/member/delete.do",
+			  data:  {
+				  password : $("#deletepassword").val(),
+				  email : $("#setemail").val()
+				},
+			  success: function(result) {
+				   if (result.status == "success") {
+					   window.alert("회원 탈퇴 되었습니다."); 
+					   location.href = "../auth/logout.do";
+				   }else if(result.status == "failure"){
+					   window.alert("비밀번호가 일치 하지 않습니다."); 
+					   $("#deletepassword").val("");
+					   document.deletecheck.deletepassword.focus();
+				   }
+				},
+				  
+			  dataType: "json",
+			  async:false
+			});
+		 
+	});
+	
+		
+
+</script>   
+   
+
+<script>
+
+
+<!-- 로그인!!! -->
+$("#loginbtn").click(function(event) {
+  $.post("../auth/login.do", {
+    email : $("#email").val(),
+    password : $("#password").val()
+  }, function(result) {
+    if (result.status == "success") {
+      location.href = "main.html";
+    } else if (result.status == "fail"){
+    	$(function() {
+    	    $( "#dialog" ).dialog({
+    	    	position: { my: "center", at: "top", of: window },
+    	    	show: "slide",
+    	    	hide: "slide"});
+    	  });
+      //window.alert("아이디와 비밀번호가 맞지 않습니다.");
+      setTimeout(function(){$("#email").focus();}, 1);
+    }
+  }, "json")
+});
+ 
+
+<!-- 이메일/비밀번호 정규식!!!!! -->
+var regexEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+var regexPassword =  /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,16}$/;
+<!-- 비밀번호 정규식 적용!!! -->
+ $(function(){
+  $('#passwordsignup').keyup(function(){
+   $('font[name=check]').text('');
+   	 if(!$('#passwordsignup').val().match(regexPassword)) {
+   		 $('font[name=pcheck]').text('');
+		 $('font[name=pcheck]').html("비밀번호는 숫자와 영문자 조합으로 6~16자리를 사용해 주세요");
+		 $('font[name=pchecked]').text('');
+   	 } else {
+   		 $('font[name=pchecked]').text('');
+		 $('font[name=pcheck]').text('');
+   	 }
+  });
+ });
+ 
+  <!-- 설정 팝업 정규식 -->
+  $(function(){
+	  $('#setpassword').keyup(function(){
+	   $('font[name=prcheck]').text('');
+	   	 if(!$('#setpassword').val().match(regexPassword)) {
+			 $('font[name=prcheck]').html("비밀번호는 숫자와 영문자 조합으로 6~16자리를 사용해 주세요");
+			 $('font[name=prcheck]').css("color","red");
+	   	 } else {
+			 $('font[name=prcheck]').text('');
+	   	 }
+	  });
+  });
+  
+  <!-- 회원가입시 pw / pw확인 일치하는지 스크립트 -->
+  $('#passwordsignup_confirm').keyup(function(){
+   if($('#passwordsignup').val()!=$('#passwordsignup_confirm').val()){
+    $('font[name=check]').text('');
+    $('font[name=check]').html("암호가 일치하지 않습니다.");
+    $('font[name=checked]').text('');
+    return;
+   }else {
+    $('font[name=checked]').text('');
+    $('font[name=checked]').html("암호가 일치합니다.");
+    $('font[name=check]').text('');
+   }
+  });
+  
+  
+  $('#setpassword_confirm').keyup(function(){
+	   if($('#setpassword').val()!=$('#setpassword_confirm').val()){
+		$('font[name=pcheck]').text('');
+	    $('font[name=pcheck]').html("암호가 일치하지 않습니다.");
+	    $('font[name=pcheck]').css("color","red");
+	    return;
+	   }else {
+	    $('font[name=pcheck]').html("암호가 일치합니다.");
+	    $('font[name=pcheck]').css("color","blue");
+	   }
+	  });
+
+ 
+<!-- 이메일 정규식 적용 -->
+	$(function(){
+		  $('#emailsignup').keyup(function(){
+		   $('font[name=mcheck]').text('');
+			   if(!$('#emailsignup').val().match(regexEmail)){
+				    $('font[name=mcheck]').text('');
+				    $('font[name=mcheck]').html("이메일은 test@test.com 형식으로 작성해 주세요.");
+				    $('font[name=mchecked]').text('');
+				    return;
+				   }else {
+				    $('font[name=mchecked]').text('');
+				    $('font[name=mcheck]').text('');
+				   }
+			   
+		  });
+	 });
+ 
+	
+	
+	
+</script>
+
+
+
+<!-- 로그인 하면 로그아웃 버튼 나타나게! -->
+<script>
+$.post("../auth/log.do", {
+	nick : $("#usernamesignup").val(),
+	email : $("#emailsignup").val(),
+	password : $("#passwordsignup").val()
+}, function(result) {
+	if (result.status == "success") {
+		loadPhoto();
+	} else if (result.status == "failure"){
+		/* $('#sign').css("display", "");
+		$('#logout').css("display", "none"); */
+
+	}
+}, "json");
+</script>
+
+<script>
+<!-- 회원가입 -->
+
+	$("#signinbtn").click(function(event) {
+		
+		var theForm = document.regi;
+		
+		var member={"email":"", "nick":""};
+				
+		 $.ajax({
+			  type: 'POST',
+			  url: "../ajax/member/detailByNick.do",
+			  data:  {
+					nick : $("#usernamesignup").val()
+				},
+			  success: function(result) {
+				  if (result != null) {
+						member.nick = result.nick;
+				  }
+				},
+			  dataType: "json",
+			  async:false
+			});
+	
+	 	$.ajax({
+		  type: 'POST',
+		  url: "../ajax/member/detailByEmail.do",
+		  data:  {
+				email : $("#emailsignup").val()
+			},
+		  success: function(result) {
+			  if (result != null) {
+				member.email = result.email;
+			  }
+			},
+		  dataType: "json",
+		  async:false
+		});
+	 	
+			
+			if(member.nick != "" || member.email !="") {	
+				if(member.nick != "") {
+					window.alert("이미 존재하는 닉네임 입니다.");
+					theForm.usernamesignup.focus();
+				} else if (member.email != "") {
+					window.alert("이미 존재하는 이메일 입니다.");
+					theForm.emailsignup.focus();
+				}
+			} else {
+				if(theForm.usernamesignup.value!="" && theForm.emailsignup.value!="" && theForm.passwordsignup.value!="" && theForm.passwordsignup_confirm.value!="" ){
+				   
+					if(!$('#emailsignup').val().match(regexEmail)) {
+						window.alert("이메일 형식에 맞지 않습니다.");
+						theForm.emailsignup.focus();
+					}else if(!$('#passwordsignup').val().match(regexPassword)) {
+						window.alert("비밀번호 형식에 맞지 않습니다.");
+						theForm.passwordsignup.focus();
+					}else {
+							if($("#passwordsignup").val() == $("#passwordsignup_confirm").val()) {
+										$.post("../ajax/member/add.do", {
+											nick : $("#usernamesignup").val(),
+											email : $("#emailsignup").val(),
+											password : $("#passwordsignup").val()
+										}, function(result) {
+											if (result.status == "success") {
+												location.href = "main.html";
+											} else {
+												 window.alert("회원 등록 실패입니다!"); 
+												}
+											}, "json");
+								}else if($("#passwordsignup").val() != $("#passwordsignup_confirm").val()) {
+								window.alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+								}
+					}
+				} else if(theForm.usernamesignup.value=="" || theForm.emailsignup.value=="" || theForm.passwordsignup.value=="" || theForm.passwordsignup_confirm.value=="" ){
+					if(theForm.usernamesignup.value==""){
+						window.alert("닉네임을 입력해 주시기 바랍니다.");
+						theForm.usernamesignup.focus();
+					}else if(theForm.emailsignup.value==""){
+						window.alert("이메일을 입력해 주시기 바랍니다.");
+						theForm.emailsignup.focus();
+					}else if(theForm.passwordsignup.value==""){
+						window.alert("비밀번호를 입력해 주시기 바랍니다.");
+						theForm.passwordsignup.focus();
+					}else {
+						window.alert("비밀번호를 확인해 주시기 바랍니다.");
+						theForm.passwordsignup_confirm.focus();
+					}
+				}
+			}
+		
+	});
+	
+	$("#logout").click(function(event) {location.href = "../auth/logout.do";});
+
+</script>
+                 
+
+</body>
+</html>

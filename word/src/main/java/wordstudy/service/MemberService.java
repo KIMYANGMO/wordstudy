@@ -15,6 +15,7 @@ public interface MemberService {
   void photChange(Member member);
   boolean exist(String email, String password);
   List<Member> list(Member member);
+  int mylikes(Member member); 
   int countPage(int pageSize);
 }
 

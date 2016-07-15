@@ -68,6 +68,10 @@ public class DefaultMemberService implements MemberService {
     return false;
   }
   
+  public int mylikes(Member member) {    
+    return memberDao.mylikes(member);
+  }
+  
   public List<Member> list(Member member) {
     HashMap<String,Object> paramMap = new HashMap<>();
     paramMap.put("email", member.getEmail());
@@ -81,5 +85,6 @@ public class DefaultMemberService implements MemberService {
       pages++;
     return pages;
   }
+
   
 }

@@ -16,4 +16,5 @@ public interface MemberDao {
   int delete(String email);
   int isMember(Map<String,Object> paramMap);
   int countAll();
+  int mylikes(Member member);
 }

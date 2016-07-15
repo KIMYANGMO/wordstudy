@@ -1,6 +1,7 @@
 package wordstudy.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 
 import javax.servlet.ServletException;
@@ -106,8 +107,13 @@ public class AuthController {
   
   @RequestMapping(value="/toMain")
   @ResponseBody
-  public String toMain()throws ServletException, IOException {
+  public String toMain(HttpServletResponse response)throws ServletException, IOException {
     System.out.println("kkkk!");
+    PrintWriter writer = response.getWriter();
+    writer.println("<script type='text/javascript'>");
+    writer.println("alert('로그인이 필요합니다.');");
+    writer.println("</script>");
+    writer.flush();
     return "redirect:../main/main.html";
   }
   

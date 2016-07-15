@@ -1,0 +1,571 @@
+/* body {
+  color: #BAB0A7;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+} */
+
+#list {
+  position: relative;
+  height: auto;
+  margin-top: 12px;
+}
+
+#list li {
+  position: relative;
+  height: 230px;
+}
+
+.mypage {
+/*   
+  left: 50%;
+  width: 20%;
+  height: 50%;
+  position: relative;
+  margin: -10px 0 0 300px; */
+  width: 150px;
+  height: 50px;
+}
+
+.thumbnail {
+  position: absolute;
+  border-radius : 50% !important;
+ /*
+  left:50%;
+  margin: -170px -200px 0 200px; */
+}
+
+.imgdiv {
+  position: absolute;
+/*   left:50%;
+  margin: -170px 50px 100px 150px; */
+}
+
+.name {
+  position: absolute;
+/*   left: 50%; */
+  margin: 0 0 0 40px; 
+  width: 80px;
+  color : black;
+}
+
+#received-likes {
+  position: relative;
+  left: 50%;
+  margin: 0 150px 0 0;
+}
+
+.mainicon {
+  position: absolute;
+  left: 50%;
+  margin: 100px 0 0 -65px;
+}
+
+.likecount {
+  position: absolute;
+  left: 50%;
+  margin: 125px 0 0 -78px;
+}
+
+.statcount {
+   position: absolute;
+  left: 50%;
+  margin: 101px 0 0 -35px;
+}
+
+
+#topsearch {
+   width: 400px;
+   height: 40.5px;
+   border: 2px black solid;
+   background-color: transparent;
+   background-image: url( "searchbtn.png" );
+   background-position: 99% 2px;
+   background-repeat: no-repeat;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+}
+video#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+#strip {
+   position: absolute;
+   width: 1920px;
+   height: auto;
+}
+#d1 {
+   position: relative;
+   min-width: 960px;
+   width: 100%;
+   height: 246px;
+   padding-bottom: 13%;
+   overflow: hidden;
+}
+#popbutton {
+  border: none;
+  padding: 0 0;
+}
+#logodiv {
+   position: absolute;
+   top: 35px;
+   width: 400px;
+   height: 100px;
+   z-index: 1;
+   right: 50%;
+   margin: 0 -200px 0 0;
+}
+#topsearchdiv {
+   position: absolute;
+   height: 45px;
+   width: 500px;
+   top: 150px;
+   right: 50%;
+   margin: 0 -250px 0 0;
+   z-index: 1;
+}
+#resultword {
+  position: absolute;
+   width: auto;
+   height: 100px;
+   top: 50px;
+   left: 50%;
+   margin: 0 0 0 -180px;
+}
+#resultmean {
+   position: absolute;
+   width: 490px;
+   height: auto;
+   top: 140px;
+   left: 50%;
+   margin: 0 0 0 -180px;
+   padding-left: 5px;
+}
+.nic {
+       position: absolute;
+       font-size: small;
+       top: 75px;
+       left: 50%;
+       margin: 0 0 0 -310px;
+      }
+      
+      .date {
+       position: absolute;
+       color: gray;
+       font-size: small;
+      top: 75px;
+      left: 50%;
+      margin: 0 0 0 -240px;
+    }
+    
+    .word {
+       position: absolute;
+       top: 79px;
+       left: 50%;
+      margin: 0 0 0 -310px;
+      } 
+      
+      .mean {
+       position: absolute;
+       top: 103px;
+      left: 50%;
+      margin: 0 0 0 -120px;
+    }
+    
+    .profile {
+      position: absolute;
+      top: 103px;
+      left: 50%;
+      margin: 0 0 0 -420px;
+    }
+    
+    .cracker {
+      position: absolute;
+      top: 140px;
+      left: 50%;
+      margin: 0 0 0 -320px;
+    }
+    
+    .weeks {
+       position: absolute;
+       top: 140px;
+       width: 300px;
+       height: auto;
+      left: 50%;
+      margin: 0 0 0 -120px;
+     }
+     
+		.star {
+		  position: absolute;
+		  top: 146px;
+		  left: 50%;
+		  margin: 0 0 0 210px;
+			width: 50px;
+			height: 50px;
+		}
+     .like {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        margin: 0 0 0 280px;
+    }
+
+      .hate { 
+        position: absolute;
+        top: 153px;
+      left: 50%;
+      margin: 0 0 0 360px;
+      }
+      
+      .num {
+        position: absolute;
+        top: 149px;
+       left: 50%;
+       margin: 0 0 0 320px;
+      }
+
+      .num2 {
+        position: absolute;
+        top: 149px;
+       left: 50%;
+       margin: 0 0 0 400px;
+      }
+      
+      .line {
+       position: absolute;
+       width: 1000px;
+       top: 35px;
+       right: 50%;
+       margin: 0 -500px 0 0;
+      }
+    
+    .line2 {
+       position: absolute;
+       width: 1300px;
+       top: 255px;
+       right: 50%;
+       margin: 0 -650px 0 0;
+      }
+
+
+/**/
+
+
+ #d2 {
+  position: relative;
+  min-width: 960px;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+#d3 {
+  position: absolute;
+  top: 600px;
+  min-width: 960px;
+  width: 100%;
+  height: 100%;
+}
+
+
+#enrolldiv {
+   position: absolute;
+   width: 200px;
+   height: 100px;
+   top: 250px;
+   left: 50%;
+   margin : 0 0 0 -100px ;
+}
+#noword {
+   position: absolute;
+   width: 360px;
+   height: 80px;
+   top: 130px;
+   left: 50%;
+   margin: 0 0 0 -180px;
+} 
+.change {
+  display: inline-block;
+}
+#dialog {
+  z-index: 9999;
+}
+.settingpro {
+	border-radius: 100%;
+}
+
+
+#inputfiles {
+	position: absolute;
+	top: 120px;
+	left: 215px;
+	width: 1px !important;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	cursor: pointer;
+}
+
+/* 팝업페이지css */
+body {
+background-color: #F5F0E6;
+padding-right: 0 !important;
+}
+
+
+.modal-hedaer .modal-body .modal-footer {
+font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-weight: bold;
+}
+#exampleModalLabel {
+font-size: 36px;
+    color: #242b33;
+    padding: 2px 0 10px 0;
+    font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+#as_imgPreview {
+    padding: 10px;
+    position: absolute;
+    width: 160px;
+    height: 110px;
+    margin-left: 256px;
+    margin-top: 14px;
+}
+#inputFile {
+padding: 5px;
+height: 140px;
+width: 350px;
+}
+#Means {
+padding : 10px;
+height: 40px;
+width: 420px;
+border: 1px solid gray;
+}
+#imgArea {
+border: 1px solid gray;
+}
+#message-text {
+height: 110px;
+width: 420px;
+border: 1px solid gray;
+}
+#addbtn {
+    width: 30%;
+    cursor: pointer;
+    background: #242b33;
+    padding: 8px 5px;
+    font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid rgb(28, 108, 122);
+    margin-top: -25px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+ 0px 0px 0px 3px rgb(254, 254, 254),
+ 0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+ 0px 0px 0px 3px rgb(254, 254, 254),
+ 0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+ 0px 0px 0px 3px rgb(254, 254, 254),
+ 0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; 
+}
+#as_imgPreview {
+text-align: center;
+}
+.modal-header:after {
+content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -moz-linear-gradient(left, rgba(36,43,51,0) 0%, rgba(36,43,51,0.8) 20%, rgba(36,43,51,1) 53%, rgba(36,43,51,0.8) 79%, rgba(36,43,51,0) 100%); 
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(36,43,51,0)), color-stop(20%,rgba(36,43,51,0.8)), color-stop(53%,rgba(36,43,51,1)), color-stop(79%,rgba(36,43,51,0.8)), color-stop(100%,rgba(36,43,51,0))); 
+  background: -webkit-linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
+  background: -o-linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
+  background: -ms-linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
+  background: linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
+}
+.modal-header {
+border-bottom: 0px;
+}
+.modal-footer {
+border-top: 0px;
+}
+
+.modal-content {
+width : 450px;
+height: auto;
+left: 75px;
+}
+
+.popup {
+   position: absolute;
+  width: 450px;
+  top: 25%;
+  left: 50%;
+  margin: 0 0 0 -225px;
+}
+
+div.modal-dialog.modal-lg {
+  position: absolute;
+  width: 450px;
+  top: 15%;
+  left: 50%;
+  margin: 0 0 0 -300px;
+}
+#wrapper {
+  position: absolute;
+  width: auto !important;
+  height: auto !important;
+  top: 90%;
+  left: 1%;
+}
+
+.add-second-content {
+  height: 350px;
+}
+
+/* p.login.button {
+  position: relative;
+  top: -30%;
+  left: 20%;
+}
+*/
+ 
+#wrapper p.button input {
+  position: absolute;
+  width: 113px;
+  height: 25px;
+  font-size: 18px;
+  right: 16%;
+}
+
+/* log icon */
+
+.menubar{
+ position: absolute;
+  right: 1%;
+  top: 30px;
+  width: auto;
+  height: auto;
+border:none;
+border:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+/* background: rgb(109,109,109); */
+height: 50px;
+width: auto;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: rgb(109,109,109);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(109,109,109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+border:0px;
+/* margin: 50px 0 0 0; */
+position:absolute;
+width:170px;
+z-index:9999; 
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(109,109,109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:170px;
+z-index:9999;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+#current {
+background-color: transparent;
+}
+

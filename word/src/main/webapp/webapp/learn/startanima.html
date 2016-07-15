@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TextProgress</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='../css/txtProgress.css' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    .tp {
+        font-family: "Roboto Condensed";
+    }
+
+    body {
+        width: 500px;
+        margin: 120px auto 0;
+    }
+
+    input {
+
+        margin: 10px;
+        padding: 5px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .example {
+        margin-top: 60px;
+    }
+
+    h3 {
+        margin-top: 50px;
+    }
+
+</style>
+<body>
+<div class="example">
+    <div class="textProgress html">
+        <span class="tp">READY GO! </span>
+        <span class="tp">READY GO! </span>
+        <div class="progress"><span class="percent">20%</span></div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../js/txtProgress.js"></script>
+<script>
+atest ();
+    function atest () {
+    	for (var i = 0; i <= 100; i+=7){
+          $(".textProgress").data("animated", false).textProgress(i);
+    	}
+    	$(".textProgress").data("animated", false).textProgress(100);
+    	setTimeout("location.href='../learn/learnmean.html'", 7000); 
+    }
+</script>
+</html>

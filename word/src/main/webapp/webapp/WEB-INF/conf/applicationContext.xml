@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="wordstudy">
+      <!-- 페이지 컨트롤러는 제외한다. -->
+      <context:exclude-filter type="regex" expression="wordstudy.controller.*"/>
+    </context:component-scan>
+    
+    <bean id="sqlSessionFactory" 
+          class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource"/>
+      <property name="mapperLocations" 
+                value="classpath*:wordstudy/dao/*Mapper.xml" />
+      <property name="typeAliasesPackage" value="wordstudy.vo" />
+    </bean>
+    
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+      <property name="basePackage" value="wordstudy.dao"/>
+    </bean>
+   
+    <bean id="dataSource" 
+          class="org.apache.commons.dbcp.BasicDataSource" 
+          destroy-method="close">
+		    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		    <property name="url" value="jdbc:mysql://localhost:3306/worddb" />
+		    <property name="username" value="root" />
+		    <property name="password" value="1111" />
+		</bean>
+		
+		<!-- 트랜잭션 관리자 등록 -->
+		<bean id="txManager" 
+		      class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+      <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <!-- 서비스 메서드에 적용할 AOP 필터 선언 
+         => 필터 클래스를 만들지 않았는데?
+         => 스프링에서 트랜잭션을 위해 미리 만들어 놓은 AOP 필터(advice) 객체이다.
+            개발자가 따로 필터 클래스를 만들 필요가 없다. 
+    -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="retrieve*" read-only="true"/>
+            <tx:method name="list*" read-only="true"/>
+            <tx:method name="count*" read-only="true"/>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+    
+    <!-- 스프링 AOP 기능 활성화 시킨다. -->
+    <aop:aspectj-autoproxy/>
+    
+    <!-- 포인트 컷(특정 조건에 해당하는 메서드에 대해)으로 AOP 필터 적용 -->
+    <aop:config>
+        <!-- 포인트 컷 선언 => 필터를 적용할 대상 클래스와 메서드를 지정 -->
+        <aop:pointcut id="serviceOperationPointCut" 
+                      expression="execution(* *..service.impl..*(..))"/>
+        <!-- 포인터 컷과 어드바이스를 연결 
+             => 대상 메서드를 만나면 txAdvice 규칙에 따라 필터를 실행하라!
+             => 즉 대상 메서드를 호출할 때 마다 txAdvice 규칙에 정의된 대로
+                트랜잭션을 다뤄라! 
+        -->
+        <aop:advisor advice-ref="txAdvice" 
+                     pointcut-ref="serviceOperationPointCut"/>
+    </aop:config>
+    
+</beans>
+
+
+
+
+
+
+
+
+
+

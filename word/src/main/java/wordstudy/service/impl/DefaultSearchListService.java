@@ -51,11 +51,11 @@ public class DefaultSearchListService implements SearchListService {
     searchListDao.delete(no);
   } */
   
-  public int likes(SearchList searchList) {    
+  public Integer likes(SearchList searchList) {    
     return searchListDao.likes(searchList);
   }
   
-  public int hates(SearchList searchList) {    
+  public Integer hates(SearchList searchList) {    
     return searchListDao.hates(searchList);
   }
   

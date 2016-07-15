@@ -126,6 +126,7 @@ public class MyWordAjaxController {
     HashMap<String,Object> result = new HashMap<>();
     result.put("exist", exist);
     
+    System.out.println(result.get("exist"));
     return new Gson().toJson(result);
   }
   

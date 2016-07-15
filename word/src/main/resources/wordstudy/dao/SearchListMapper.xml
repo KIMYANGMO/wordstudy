@@ -18,6 +18,7 @@
     <result column="HATES"    property="hateNo"/>
     <result column="PHOT"    property="prophotPath"/>
   </resultMap>
+
     
   <insert id="insert" parameterType="SearchList">
     insert into assos(MENO, MNO, ASSO, A_PHOT, HINT, DATE, BEST, LIKES, HATES, FAVOR, A_THUM) 
@@ -50,12 +51,13 @@
     select * from my_LOH where mno=#{mno}
     and ano=(select ano from assos where asso=#{asso})   
   </select>
-  
-  <select id="likes" resultType="int" parameterType="SearchList">
+
+  <select id="likes" resultType="Integer" parameterType="SearchList" >
     select likes from my_LOH where mno=#{mno}
     and ano=(select ano from assos where asso=#{asso})   
   </select>
-  <select id="hates" resultType="int" parameterType="SearchList">
+    
+  <select id="hates" resultType="Integer" parameterType="SearchList">
     select hates from my_LOH where mno=#{mno}
     and ano=(select ano from assos where asso=#{asso})   
   </select>
@@ -90,7 +92,7 @@
 		AND W.WORD = #{word}
     order by A.LIKES DESC
   </select>
-  
+    
   <!-- <select id="selectOne" resultMap="SearchListMap" parameterType="int">
     select BNO, TITLE, CONTS, VWCNT, CDT 
     from BOARDS

@@ -15,8 +15,8 @@ public interface SearchListService {
   void wordMeanAdd(SearchList searchList);
   void wordAdd(SearchList searchList);
   void likesUpdate(SearchList searchList);
-  int likes(SearchList searchList);
-  int hates(SearchList searchList);
+  Integer likes(SearchList searchList);
+  Integer hates(SearchList searchList);
   SearchList assoList(SearchList searchList);
   void myLOHAdd(SearchList searchList);
   void likesUpdateAdd(SearchList searchList);

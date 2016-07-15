@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/list.min.css">
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="../bower_components/bootstrap/dist/bootstrap.min.js"></script>
+<style>
+#d2 {
+	/* border: 4px solid red; */
+	position: relative;
+	min-width: 960px;
+  width: 100%;
+	height: 230px;
+  overflow: hidden;
+}
+#d3 {
+	/* border: 2px solid blue; */
+	position: relative;
+	min-width: 960px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+#enrolldiv {
+   position: absolute;
+   width: 200px;
+   height: 100px;
+   top: 170px;
+   left: 50%;
+   margin : 0 0 0 -100px ;
+}
+</style>
+<script type="text/javascript">
+    $(function () {
+        $("#popbutton").click(function () {
+            $('div.modal').modal({ remote: 'addpopupbox.html' });
+        })
+    })
+</script>
+</head>
+<body>
+
+<div id="d1">
+   <span id="threediv">
+   <nav>
+		 <ul>
+			 <li><a href="#" class="newfile-btn"><i></i><img src="../images/newfile.png" width="70"/><br></br><font size='3'>연상법 등록</font></a></li>
+       <li><a href="#" class="study-btn"><i></i><img src="../images/pencil.png" width="70"/><br></br><font size='3'>연상법 학습</font></a></li>
+       <li><a href="#" class="profile-btn"><i></i><img src="../images/pro.png" width="70"/><br></br><font size='3'>마이 페이지</font></a></li>
+		 </ul>
+	 </nav>
+	 </span>
+   <div id="logodiv" align="center" class="top"><img src="../images/logo.png" id="logo"/></div>
+   <div id="searchdiv" align="center"><input id="search" type="text"
+                                      value="search"  onfocus="this.value=''" onblur="if(this.value =='') this.value='search';"/></div>
+   <video autoplay loop poster="../images/strip.jpg" id="bgvid">
+     <source src="../images/search_back.mp4" type="video/mp4">
+	 </video>
+</div>
+<div class="container">
+<div id="d2">
+	<div id="resultword" align="right"><font size="15">Crack</font></div>
+	<div id="resultmean" align="left">1) 갈라지다<br>2) 깨지다</div>
+	<div id="enrolldiv" align="center">
+	   <button class="btn btn-default" id="popbutton"><img src="../images/enroll.jpg"></button><br/>
+	</div>
+	<div class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	     <!-- remote ajax call이 되는영역 -->
+	    </div>
+	  </div>
+	</div>
+</div>
+<div id="d3">
+	<div id="line" align="center"><img  src="../images/line.jpg" alt="line" /></div>
+	<ul>
+	<li>
+	<span id="nic" align="left"><strong>귀염둥</strong> </span>
+	<span id="date" align="left"> 2016-06-08 12:38:23 </span>
+	<span id="word" align="left"><h3><strong>Crack</strong></h3></span>
+	<span id="mean" align="left">갈라지다 </span>
+	<span id="weeks" align="left"><h4><strong>크래커가 갈라지다</strong></h4> </span>
+	<span id="num" align="left"><h4>0</h4> </span>
+	<span id="num2" align="left"><h4>0</h4> </span>
+	
+	<span id="cracker"><img  src="../images/cracker.png" alt="cracker" width="165px" /></span>
+	<span id="profile"><img  src="../images/profile.png" alt="profile" width="85px" /></span>
+	<span id="star"><img  src="../images/star.png" alt="star" width="40px"/></span>
+	<span id="like"><img  src="../images/like.png" alt="like" width="30px" /></span>
+	<span id="hate"><img  src="../images/hate.png" alt="hate" width="30px" /></span>
+	<div id="line2" align="center"><img  src="../images/line.jpg" alt="line" /></div>
+	</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

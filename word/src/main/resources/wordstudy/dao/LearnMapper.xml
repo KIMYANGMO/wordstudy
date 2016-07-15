@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="wordstudy.dao.LearnDao">
+  <resultMap type="Learn" id="LearnMap">
+    <id     column="MENO"    property="meno"/>
+    <id     column="WORD"    property="word"/>
+    <result column="A_THUM"    property="assothumPath"/>
+    <result column="HINT"    property="hint"/>    
+  </resultMap>
+ 
+  <select id="hintList" resultMap="LearnMap">
+    select hint,meno,A_THUM from assos order by rand() limit 10;
+  </select>
+  
+  <select id="correctMean" parameterType="int" resultMap="LearnMap">
+    select word,mean from means where meno=#{meno};
+  </select>
+  
+	<select id="selectList" resultMap="LearnMap">
+    select mean from means 
+    where word not in(select WORD from MEANS where MENO=#{meno}) 
+    order by rand() 
+    limit 3;  
+  </select>
+	
+	<select id="otherHint" parameterType="int" resultMap="LearnMap">
+    select hint,A_THUM from assos where meno=#{meno};
+  </select>  
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

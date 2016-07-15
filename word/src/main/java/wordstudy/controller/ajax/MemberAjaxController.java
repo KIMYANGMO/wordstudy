@@ -185,7 +185,7 @@ public class MemberAjaxController {
       String filename = System.currentTimeMillis() + "-" + "p" + count()
                          + cmf.getOriginalFilename().substring(extPoint);
       System.out.printf("새파일명=%s\n", filename);
-      String realPath = "C:/Users/Administrator/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp4/wtpwebapps/word/upload/" + filename;
+      String realPath = "C:/Users/bit/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/word/upload/" + filename;
       System.out.printf("새 파일을 저장할 실제 경로=%s\n", realPath);
       try {
         cmf.transferTo(new File(realPath));
@@ -213,10 +213,24 @@ public class MemberAjaxController {
     List<Member> list = memberService.list(member);
     
     HashMap<String,Object> result = new HashMap<>();
+    
+  
+    System.out.println("멤버");
+    
+    int totLikes = memberService.mylikes(member);
+    
+    
+    result.put("totLikes", totLikes);
     result.put("list", list);
     
     return new Gson().toJson(result);
+
   }
+  
+  
+  
+  
+  
   
   
 }
