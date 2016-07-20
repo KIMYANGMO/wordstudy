@@ -1,5 +1,5 @@
 package wordstudy.vo;
-
+/*-----------------------------START----------------------------*/
 public class Paging {
   private int pageSize; 
   private int firstPageNo; // 첫 번째 페이지 번호
@@ -139,4 +139,5 @@ public class Paging {
     this.setFinalPageNo(finalPage); // 마지막 페이지 번호
     
   }
+  /*-----------------------------END----------------------------*/
 }

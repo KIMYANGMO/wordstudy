@@ -11,6 +11,7 @@ public interface SearchListService {
   
   List<SearchList> list(String word);
   void change(SearchList searchList);
+  /*-----------------------------START----------------------------*/
   int countPage(int pageSize);
   void wordMeanAdd(SearchList searchList);
   void wordAdd(SearchList searchList);
@@ -28,4 +29,5 @@ public interface SearchListService {
   void assoListDelete(SearchList searchList);
   int findAsso(SearchList searchList);
   void assoUpdate(SearchList searchList);
+  /*-----------------------------END----------------------------*/
 }

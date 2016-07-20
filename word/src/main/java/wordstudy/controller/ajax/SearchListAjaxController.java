@@ -40,7 +40,13 @@ public class SearchListAjaxController {
   @Autowired SearchListService searchListService;
   @Autowired MyWordService myWordService;
   @Autowired ServletContext servletContext;
-    
+
+  int no = 0;
+  synchronized private int count() {
+    if (++no == 100) no = 1;
+    return no;
+  }
+  /*-----------------------------START----------------------------*/
   @RequestMapping(value="assoDelete", produces="application/json;charset=UTF-8")
   @ResponseBody
   public String assoDelete(HttpSession session, int ano) throws ServletException, IOException {
@@ -343,52 +349,11 @@ public class SearchListAjaxController {
     return "redirect:../list/list.html?word=" + word;
   }
   
-  int no = 0;
-  synchronized private int count() {
-    if (++no == 100) no = 1;
-    return no;
-  }
-  
-  @RequestMapping(value="delete", produces="application/json;charset=UTF-8")
-  @ResponseBody
-  public String delete(int no) 
-      throws ServletException, IOException {
-    HashMap<String,Object> result = new HashMap<>();
-    try {
-      searchListService.delete(no);
-      result.put("status", "success");
-    } catch (Exception e) {
-      result.put("status", "failure");
-    }
-    return new Gson().toJson(result);
-  }
-  
-  @RequestMapping(value="detail", produces="application/json;charset=UTF-8")
-  @ResponseBody
-  public String detail(int no) throws ServletException, IOException {
-    SearchList searchList = searchListService.retrieve(no);
-    return new Gson().toJson(searchList);
-  }
-  
   @RequestMapping(value="word", produces="application/json;charset=UTF-8")
   @ResponseBody
   public String retrieveWord(String word) throws ServletException, IOException {
     SearchList searchList = searchListService.retrieveWord(word);
     return new Gson().toJson(searchList);
-  }
-  
-  
-  
-  @RequestMapping(value="list", produces="application/json;charset=UTF-8")
-  @ResponseBody
-  public String list(HttpSession session,
-      @RequestParam String word)
-      throws ServletException, IOException {
-    
-    List<SearchList> list = searchListService.list(word);
-    HashMap<String,Object> result = new HashMap<>();
-    result.put("list", list);
-    return new Gson().toJson(result);
   }
   
  @RequestMapping(value="likesUpdate",    
@@ -432,26 +397,40 @@ public class SearchListAjaxController {
    }
    return new Gson().toJson(result);
  }
-  /*@RequestMapping(value="update",
-      method=RequestMethod.POST,
-      produces="application/json;charset=UTF-8")
-  @ResponseBody
-  public String update(int no, String title, String content) throws ServletException, IOException {
-    
-    SearchList searchList = new SearchList();
-    searchList.setNo(no);
-    searchList.setTitle(title);
-    searchList.setContent(content);
-    
-    HashMap<String,Object> result = new HashMap<>();
-    try {
-      searchListService.change(searchList);
-      result.put("status", "success");
-    } catch (Exception e) {
-      result.put("status", "failure");
-    }
-    return new Gson().toJson(result);
-  }*/
+ /*-----------------------------END----------------------------*/
+ 
+ @RequestMapping(value="list", produces="application/json;charset=UTF-8")
+ @ResponseBody
+ public String list(HttpSession session,
+     @RequestParam String word)
+     throws ServletException, IOException {
+   
+   List<SearchList> list = searchListService.list(word);
+   HashMap<String,Object> result = new HashMap<>();
+   result.put("list", list);
+   return new Gson().toJson(result);
+ }
+  
+ @RequestMapping(value="detail", produces="application/json;charset=UTF-8")
+ @ResponseBody
+ public String detail(int no) throws ServletException, IOException {
+   SearchList searchList = searchListService.retrieve(no);
+   return new Gson().toJson(searchList);
+ }
+
+ @RequestMapping(value="delete", produces="application/json;charset=UTF-8")
+ @ResponseBody
+ public String delete(int no) 
+     throws ServletException, IOException {
+   HashMap<String,Object> result = new HashMap<>();
+   try {
+     searchListService.delete(no);
+     result.put("status", "success");
+   } catch (Exception e) {
+     result.put("status", "failure");
+   }
+   return new Gson().toJson(result);
+ }
 }
 
 

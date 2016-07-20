@@ -130,8 +130,6 @@ public class MemberAjaxController {
     return new Gson().toJson(result);
   }
   
-
-  
   @RequestMapping(value="pwdupdate",
       method=RequestMethod.POST,
       produces="application/json;charset=UTF-8")
@@ -226,13 +224,6 @@ public class MemberAjaxController {
     return new Gson().toJson(result);
 
   }
-  
-  
-  
-  
-  
-  
-  
 }
 
 

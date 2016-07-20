@@ -89,29 +89,6 @@ public class MyWordAjaxController {
     
     return new Gson().toJson(result);
   }
-  
-/*  @RequestMapping(value="update",
-      method=RequestMethod.POST,
-      produces="application/json;charset=UTF-8")
-  @ResponseBody
-  public String update(int no, String nick, String password, String photo) throws ServletException, IOException {
-    
-    MyWord myWord = new MyWord();
-    myWord.setNo(no);
-    myWord.setNick(nick);
-    myWord.setEmail(password);
-    myWord.setPhoto(photo);
-    
-    HashMap<String,Object> result = new HashMap<>();
-    try {
-      myWordService.change(myWord);
-      result.put("status", "success");
-    } catch (Exception e) {
-      result.put("status", "failure");
-    }
-    return new Gson().toJson(result);
-  }*/
-  
 
   @RequestMapping(value="exist", produces="application/json;charset=UTF-8")
   @ResponseBody

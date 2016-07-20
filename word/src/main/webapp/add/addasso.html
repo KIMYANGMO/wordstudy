@@ -516,19 +516,14 @@
     });
  
   </script>
+  <!-- ============================START============================ -->
   <script>
   $("#assoDataForm").submit(function(event) {   
-<<<<<<< .mine
 	  event.preventDefault();
 	   var tagAssos = document.getElementById("assos").innerHTML;
 	   $("<input type='hidden' name='asso' value='" + tagAssos + "'>").html("").appendTo("#assos");
 	   $("<input type='hidden' name='hint' value='" + tagAssos + "'>").html("").appendTo("#assos");	  
 	   var fd = new FormData($(this)[0]);
-=======
-	   event.preventDefault();
-	  
-	   var fd = new FormData($(this)[0]);
->>>>>>> .r178
      $.ajax({
     	 	 url:"../ajax/searchList/add.do",
     	 	 type:"POST",
@@ -666,6 +661,7 @@ function wordMeanAdd(word) {
 		    }, "json"	  
 		  );}});
 		}
-</script>      
+</script>   
+<!-- ============================END============================ -->   
 </body>
 </html>

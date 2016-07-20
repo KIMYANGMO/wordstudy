@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href='../css/txtProgress.css' rel='stylesheet' type='text/css'>
 <style>
-/*-----------------------------*/
+<!-- ============================START============================ -->
 .loadingEffect{
 margin-top:20%;
 margin-left:40%;
@@ -27,7 +27,7 @@ margin-left:40%;
  .tp {
         font-family: "Roboto Condensed";
     }
- /*-----------------------------*/   
+<!-- ============================END============================ -->   
 body {
 	background-color: #9BC4D5 !important;
 }
@@ -344,6 +344,7 @@ background-color: transparent;
 	   </span>
    </div>	
 </div>
+<!-- ============================START============================ -->
 <div id="pt-main" class="pt-perspective">
 <div class="pt-page pt-page-1">
 	<div class="loadingEffect">
@@ -354,10 +355,10 @@ background-color: transparent;
     </div>
 </div>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="../js/jquery.dlmenu.js"></script>
 <script src="../js/pagetransitions2.js"></script>
+<!-- ============================END============================ -->
 
 
 <script>
@@ -428,18 +429,16 @@ function loadQuestion() {
 		});
 }
 </script>	
-	
+<!-- ============================START============================ -->	
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="../js/txtProgress.js"></script>
 <script>
-atest ();
-    function atest () {
-    	/* for (var i = 0; i <= 100; i+=7){
-          $(".textProgress").data("animated", false).textProgress(i);
-    	} */
+loadEffect ();
+    function loadEffect () {
     	$(".textProgress").data("animated", false).textProgress(100);
     	setTimeout("clickotherbutton()", 2500); 
     }
 </script>
+<!-- ============================END============================ -->
 </body>
 </html>

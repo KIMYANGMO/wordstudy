@@ -9,11 +9,15 @@
 <link rel="stylesheet" type="text/css" href="../css/list12.css">
 <link rel="stylesheet" type="text/css" href="../css/component2.css" />
 <link rel="stylesheet" type="text/css" href="../css/style8.css" />
-<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-		<meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
-		<meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
-	 	<meta name="author" content="Codrops" /> 
+<link rel="stylesheet"
+	href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<meta name="description"
+	content="Loading Effects for Grid Items with CSS Animations" />
+<meta name="keywords"
+	content="css animation, loading effect, google plus, grid items, masonry" />
+<meta name="author" content="Codrops" />
 
 <link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
 
@@ -21,30 +25,36 @@
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../js/popupsettings.js"></script>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
 
 <style>
 .pagination {
-margin: 0 auto;
+	margin: 0 auto;
 }
+
 .thumbnail {
-  position: absolute;
-  border-radius : 50%;
- /*
+	position: absolute;
+	border-radius: 50%;
+	/*
   left:50%;
   margin: -170px -200px 0 200px; */
 }
 
 .change {
-  display: inline-block;
+	display: inline-block;
 }
+
 #dialog {
-  z-index: 9999;
+	z-index: 9999;
 }
+
 .settingpro {
 	border-radius: 100%;
 }
@@ -61,22 +71,20 @@ margin: 0 auto;
 	cursor: pointer;
 }
 
-
 /**/
+body {
+	background-color: #F9F6F1;
+	margin: 0 auto;
+}
 
-   body {
-   background-color: #F9F6F1;
-   margin: 0 auto;
-   } 
-
-   #d1 {
-      position: relative;
-      min-width: 960px;
-      width: 100%;
-      height: 246px;
-      padding-bottom: 13%;
-       overflow: hidden; 
-   }
+#d1 {
+	position: relative;
+	min-width: 960px;
+	width: 100%;
+	height: 246px;
+	padding-bottom: 13%;
+	overflow: hidden;
+}
 /*    #logodiv {
       position: absolute;
       top: 80px;
@@ -86,531 +94,622 @@ margin: 0 auto;
       right: 50%;
       margin: 0 -200px 0 0;
    } */
+.searchdiv {
+	position: absolute;
+	top: 40%;
+	left: 45%;
+}
 
-  .searchdiv {
-    position: absolute;
-    top: 40%;
-    left: 45%;
-  }
-  
-  
-   #threediv {
-   z-index : 1000;
-   }
-   
-   /*font (roboto)*/
+#threediv {
+	z-index: 1000;
+}
+
+/*font (roboto)*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
 /*resets*/
 * {
-    padding:0;
-    margin:0;
+	padding: 0;
+	margin: 0;
 }
 
 /*basic layout*/
-
 .material-contact {
-    width:320px;
-    max-width:100%;
-    height:auto;
-    padding: 50px 25px 30px 25px;
-    box-sizing:border-box;
-    display:block;
-    position:relative;
-    margin:0px auto;
-    overflow:hidden;
-    
-    background:#fff;
-    border-radius:5px;
+	width: 320px;
+	max-width: 100%;
+	height: auto;
+	padding: 50px 25px 30px 25px;
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 5px;
 }
 
 /*header*/
 .material-contact img {
-    width:120px;
-    height:120px;
-    display:block;
-    margin:0 auto;
-    border-radius:100%;
+	width: 120px;
+	height: 120px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 100%;
 }
+
 .material-contact h1 {
-    width:100%;
-    height:auto;
-    padding:15px 0 5px 0;
-    display:block;
-    
-    font-family:'Roboto', sans-serif;
-    font-size:1.9rem;
-    font-weight:300;
-    line-height:1em;
-    text-align:center;
-    
-    color:#000;
-    background:none;
+	width: 100%;
+	height: auto;
+	padding: 15px 0 5px 0;
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.9rem;
+	font-weight: 300;
+	line-height: 1em;
+	text-align: center;
+	color: #000;
+	background: none;
 }
+
 .material-contact h2 {
-    width:100%;
-    height:auto;
-    padding:5px 0;
-    display:block;
-    
-    font-family:'Roboto', sans-serif;
-    font-size:1.2rem;
-    font-weight:300;
-    line-height:1em;
-    text-align:center;
-    
-    color:#aaa;
-    background:none;
+	width: 100%;
+	height: auto;
+	padding: 5px 0;
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 1em;
+	text-align: center;
+	color: #aaa;
+	background: none;
 }
 
 .material-contact hr {
-    width:30%;
-    height:0;
-    padding:0;
-    display:block;
-    margin:30px auto;
-    border:1px solid #ddd;
+	width: 30%;
+	height: 0;
+	padding: 0;
+	display: block;
+	margin: 30px auto;
+	border: 1px solid #ddd;
 }
 
 /*info section*/
 .material-contact p {
-    width:100%;
-    height:auto;
-    padding:10px 0;
-    display:block;
-    
-    font-family:'Roboto', sans-serif;
-    font-size:1rem;
-    font-weight:400;
-    line-height:1.2em;
-    text-align:center;
+	width: 100%;
+	height: auto;
+	padding: 10px 0;
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.2em;
+	text-align: center;
 }
 
 .material-contact .actions {
-    width:100%;
-    height:auto;
-    padding:0;
-    display:block;
-    margin:10px 0 0 0;
-    
-    align-content:center;
-    text-align:center;
-}
-.material-contact .actions a {
-    width:auto;
-    height:auto;
-    padding:5px 10px;
-    box-sizing:border-box;
-    display:inline-block;
-    margin:5px auto;
-    
-    font-family:'Roboto', sans-serif;
-    font-size:1rem;
-    font-weight:500;
-    line-height:1.2em;
-    text-decoration:none;
-    
-    border-radius:100px;
-    background:#fff;
-    color:#aaa;
-    
-    transition:.1s;
-}
-.material-contact .actions a:hover {
-    background:#fff;
-    color:#000;
-}
-.material-contact .actions a:active {
-    background:#000;
-    color:#fff;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	display: block;
+	margin: 10px 0 0 0;
+	align-content: center;
+	text-align: center;
 }
 
+.material-contact .actions a {
+	width: auto;
+	height: auto;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 5px auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.2em;
+	text-decoration: none;
+	border-radius: 100px;
+	background: #fff;
+	color: #aaa;
+	transition: .1s;
+}
+
+.material-contact .actions a:hover {
+	background: #fff;
+	color: #000;
+}
+
+.material-contact .actions a:active {
+	background: #000;
+	color: #fff;
+}
 
 .animate-in-01 {
-    animation:animateIn 1s ease;
-    -webkit-animation:animateIn 1s ease;
+	animation: animateIn 1s ease;
+	-webkit-animation: animateIn 1s ease;
 }
+
 .animate-in-02 {
-    animation:animateIn 1s ease forwards;
-    animation-delay:.2s;
-    -webkit-animation:animateIn 1s ease forwards;
-    -webkit-animation-delay:.2s;
-    opacity:0;
+	animation: animateIn 1s ease forwards;
+	animation-delay: .2s;
+	-webkit-animation: animateIn 1s ease forwards;
+	-webkit-animation-delay: .2s;
+	opacity: 0;
 }
+
 .animate-in-03 {
-    animation:animateIn 1s ease forwards;
-    animation-delay:.4s;
-    -webkit-animation:animateIn 1s ease forwards;
-    -webkit-animation-delay:.4s;
-    opacity:0;
+	animation: animateIn 1s ease forwards;
+	animation-delay: .4s;
+	-webkit-animation: animateIn 1s ease forwards;
+	-webkit-animation-delay: .4s;
+	opacity: 0;
 }
+
 .animate-in-04 {
-    animation:animateIn 1s ease forwards;
-    animation-delay:.5s;
-    -webkit-animation:animateIn 1s ease forwards;
-    -webkit-animation-delay:.5s;
-    opacity:0;
+	animation: animateIn 1s ease forwards;
+	animation-delay: .5s;
+	-webkit-animation: animateIn 1s ease forwards;
+	-webkit-animation-delay: .5s;
+	opacity: 0;
 }
+
 .animate-in-05 {
-    animation:animateIn 1s ease forwards;
-    animation-delay:.6s;
-    -webkit-animation:animateIn 1s ease forwards;
-    -webkit-animation-delay:.6s;
-    opacity:0;
-}
-@keyframes animateIn {
-    0%{
-        opacity:0;
-        transform: translateY(50px);
-        -webkit-transform: translateY(50px);
-        -moz-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-        -o-transform: translateY(50px);
-    }
-    100%{
-        opacity:1;
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-    }
-}
-@-webkit-keyframes animateIn {
-    0%{
-        opacity:0;
-        transform: translateY(50px);
-        -webkit-transform: translateY(50px);
-        -moz-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-        -o-transform: translateY(50px);
-    }
-    100%{
-        opacity:1;
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-    }
+	animation: animateIn 1s ease forwards;
+	animation-delay: .6s;
+	-webkit-animation: animateIn 1s ease forwards;
+	-webkit-animation-delay: .6s;
+	opacity: 0;
 }
 
+@
+keyframes animateIn { 0%{
+	opacity: 0;
+	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+}
+
+100%{
+opacity
+:
+1;
+
+        
+transform
+:
+ 
+translateY
+(0);
+
+        
+-webkit-transform
+:
+ 
+translateY
+(0);
+
+        
+-moz-transform
+:
+ 
+translateY
+(0);
+
+        
+-ms-transform
+:
+ 
+translateY
+(0);
+
+        
+-o-transform
+:
+ 
+translateY
+(0);
+
+    
+}
+}
+@
+-webkit-keyframes animateIn { 0%{
+	opacity: 0;
+	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+}
+
+100%{
+opacity
+:
+1;
+
+        
+transform
+:
+ 
+translateY
+(0);
+
+        
+-webkit-transform
+:
+ 
+translateY
+(0);
+
+        
+-moz-transform
+:
+ 
+translateY
+(0);
+
+        
+-ms-transform
+:
+ 
+translateY
+(0);
+
+        
+-o-transform
+:
+ 
+translateY
+(0);
+
+    
+}
+}
 .animate-in-image {
-    animation:animateInImage 1s ease;
-    -webkit-animation:animateInImage 1s ease;
-}
-@keyframes animateInImage {
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
-}
-@-webkit-keyframes animateInImage {
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
+	animation: animateInImage 1s ease;
+	-webkit-animation: animateInImage 1s ease;
 }
 
+@
+keyframes animateInImage { 0%{
+	opacity: 0;
+}
+
+100%{
+opacity
+:
+1;
+
+    
+}
+}
+@
+-webkit-keyframes animateInImage { 0%{
+	opacity: 0;
+}
+
+100%{
+opacity
+:
+1;
+
+    
+}
+}
 .animate-in-card {
-    animation:animateIn .7s ease;
-    -webkit-animation:animateIn .7s ease;
+	animation: animateIn .7s ease;
+	-webkit-animation: animateIn .7s ease;
 }
-
 
 .textbox {
-  position: relative;
-  left: 50%;
-  width: 200px;
-  margin: 130px 0 0 -300px;
+	position: relative;
+	left: 50%;
+	width: 200px;
+	margin: 130px 0 0 -300px;
 }
 
 .mywordtext {
-  position: absolute;
-  left: 50%;
-  margin: -80px 0 0 45px;
-  width: 300px;
+	position: absolute;
+	left: 50%;
+	margin: -80px 0 0 45px;
+	width: 300px;
 }
-
 
 .line {
-  position: absolute;
-    left: 50%;
-    margin: 340px 0 0 -410px;
-    content: ' ';
-    display: block;
-    width: 800px;
-    height: 2px;
-         background: -moz-linear-gradient(left, rgba(36,43,51,0) 0%, rgba(36,43,51,0.8) 20%, rgba(36,43,51,1) 53%, rgba(36,43,51,0.8) 79%, rgba(36,43,51,0) 100%); 
-         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(36,43,51,0)), color-stop(20%,rgba(36,43,51,0.8)), color-stop(53%,rgba(36,43,51,1)), color-stop(79%,rgba(36,43,51,0.8)), color-stop(100%,rgba(36,43,51,0))); 
-         background: -webkit-linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
-         background: -o-linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
-         background: -ms-linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
-         background: linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
-         }
+	position: absolute;
+	left: 50%;
+	margin: 340px 0 0 -410px;
+	content: ' ';
+	display: block;
+	width: 800px;
+	height: 2px;
+	background: -moz-linear-gradient(left, rgba(36, 43, 51, 0) 0%,
+		rgba(36, 43, 51, 0.8) 20%, rgba(36, 43, 51, 1) 53%,
+		rgba(36, 43, 51, 0.8) 79%, rgba(36, 43, 51, 0) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(36, 43
+		, 51, 0)), color-stop(20%, rgba(36, 43, 51, 0.8)),
+		color-stop(53%, rgba(36, 43, 51, 1)),
+		color-stop(79%, rgba(36, 43, 51, 0.8)),
+		color-stop(100%, rgba(36, 43, 51, 0)));
+	background: -webkit-linear-gradient(left, rgba(36, 43, 51, 0) 0%,
+		rgba(36, 43, 51, 0.8) 20%, rgba(36, 43, 51, 1) 53%,
+		rgba(36, 43, 51, 0.8) 79%, rgba(36, 43, 51, 0) 100%);
+	background: -o-linear-gradient(left, rgba(36, 43, 51, 0) 0%,
+		rgba(36, 43, 51, 0.8) 20%, rgba(36, 43, 51, 1) 53%,
+		rgba(36, 43, 51, 0.8) 79%, rgba(36, 43, 51, 0) 100%);
+	background: -ms-linear-gradient(left, rgba(36, 43, 51, 0) 0%,
+		rgba(36, 43, 51, 0.8) 20%, rgba(36, 43, 51, 1) 53%,
+		rgba(36, 43, 51, 0.8) 79%, rgba(36, 43, 51, 0) 100%);
+	background: linear-gradient(left, rgba(36, 43, 51, 0) 0%,
+		rgba(36, 43, 51, 0.8) 20%, rgba(36, 43, 51, 1) 53%,
+		rgba(36, 43, 51, 0.8) 79%, rgba(36, 43, 51, 0) 100%);
 }
 
-
-
+}
 font {
-   line-height: 1.5em;
+	line-height: 1.5em;
 }
-
 
 .countspan {
 	position: absolute;
-    right: -107%;
-    bottom: -140%;
+	right: -107%;
+	bottom: -140%;
 }
 
 #signinpop {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -418px 0 0 -444px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -418px 0 0 -444px;
 }
-
 </style>
 
 </head>
 <body>
-  <div id="d1">
-     <span id="threediv">
-     <nav>
-       <ul>
+	<div id="d1">
+		<span id="threediv">
+			<nav>
+				<ul>
 
-          <li><a href="../add/addasso.html" class="newfile-btn"><i></i><img src="../images/newfile.png" width="70"/><br></br><font size='3'>연상법 등록</font></a></li>
-          <li><a href="../learn/learnchoice.html" class="study-btn"><i></i><img src="../images/pencil.png" width="70"/><br></br><font size='3'>연상법 학습</font></a></li>
-          <li><a href="../myword/myword.html" class="profile-btn"><i></i><img src="../images/bookicon.png" width="80"/><br></br><font size='3'>나의 단어장</font></a></li>
+					<li><a href="../add/addasso.html" class="newfile-btn"><i></i><img
+							src="../images/newfile.png" width="70" /><br></br>
+						<font size='3'>연상법 등록</font></a></li>
+					<li><a href="../learn/learnchoice.html" class="study-btn"><i></i><img
+							src="../images/pencil.png" width="70" /><br></br>
+						<font size='3'>연상법 학습</font></a></li>
+					<li><a href="../myword/myword.html" class="profile-btn"><i></i><img
+							src="../images/bookicon.png" width="80" /><br></br>
+						<font size='3'>나의 단어장</font></a></li>
 
-       </ul>
-     </nav>
-     </span>
-     
-     <div id="logodiv" align="center"><a href="../main/main.html"><img src="../images/logo.png" id="logo"/></a></div>
-     <div id="topsearchdiv" align="center">
-      <form method="get" action="../list/list.html">
-      <input id="topsearch" name="word" type="text" value="search"  onfocus="this.value=''" onblur="if(this.value =='') this.value='search';"/>
-      </form>
-      </div>
-     
-     
-     
-     
+				</ul>
+			</nav>
+		</span>
 
-
-
-   <div class="modal" id="setting" aria-hidden="true"
-      style="display: none; z-index: 1050;">
-      <span id="signinpop">
-         <div class="modal-dialog modal-lg">
-
-            <div class="modal-body">
-               <section>
-                  <div id="container_demo">
-                     <a class="hiddenanchor" id="tosettings"></a> 
-                     <a class="hiddenanchor" id="todelete"></a>
-                     <div id="wrapper">
-
-                        <div id="settings" class="animate form" style="top: 11%;">
-
-                           <form id="settingForm" name="mysetting" autocomplete="on"
-                              method='post'>
-                              <div id=pAndndiv>
-                              </div>
-                              <h1></h1>
-
-                              <p>
-                                 <label for="useremail" class="youmail" data-icon="e">이메일</label>
-                                 <input id="setemail" name="email" required="required"
-                                    type="text" readonly="readonly" />
-                              </p>
-
-                              <p>
-                                 <label for="username" class="uname" data-icon="u">닉네임
-                                    변경</label> <input id="nickCheck" name="nickCheck" type="hidden" /> <input
-                                    id="nickBefore" name="nickBefore" type="hidden" /> <input
-                                    id="setnick" name="nick" required="required" type="text" />
-                                 <font name="ncheck" size="2" color="red"></font> <br>
-                              </p>
-
-                              <p>
-                                 <label for="password" class="youpasswd" data-icon="p">비밀번호
-                                    변경</label> <input id="localpassword" name="password"
-                                    required="required" type="password" placeholder="기존 비밀번호" />
-
-                              </p>
-
-                              <p>
-                                 <input id="setpassword" name="password" required="required"
-                                    type="password" placeholder="새 비밀번호" /> <font
-                                    name="prcheck" size="2" color="red"></font> <br>
-                              </p>
-
-                              <p>
-                                 <input id="setpassword_confirm" name="password"
-                                    required="required" type="password" placeholder="새 비밀번호 확인" />
-                                 <font name="pcheck" size="2" color="red"></font>
-                              </p>
-                              <p class="change_link" style="margin-top: 80px;">
-                                 <a href="#todelete" class="to_register" style="width: 78px;">회원탈퇴
-                                 </a>
-                              </p>
-                              <p class="change button">
-                                 <input id="change" name="changebtn" value="변경"
-                                    style="text-align: center;" readonly />
-                              </p>
-                           </form>
-                        </div>
+		<div id="logodiv" align="center">
+			<a href="../main/main.html"><img src="../images/logo.png"
+				id="logo" /></a>
+		</div>
+		<div id="topsearchdiv" align="center">
+			<form method="get" action="../list/list.html">
+				<input id="topsearch" name="word" type="text" value="search"
+					onfocus="this.value=''"
+					onblur="if(this.value =='') this.value='search';" />
+			</form>
+		</div>
 
 
-                        <div id="delete" class="animate form" style="top: 11%;">
-                           <form name="deletecheck" autocomplete="on">
-                              <h1>회원탈퇴</h1>
-                              <p>
-                                 <label for="deletepassword" class="youpasswd" data-icon="p">본인
-                                    확인을 위하여 비밀번호를 입력해 주세요</label> <input id="mailCheck" name="mailCheck"
-                                    type="hidden" /> <input id="deletepassword"
-                                    name="deletepassword" required="required" type="password" />
-                              </p>
-                              <p class="delete button">
-                                 <input id="deletebtn" value="탈퇴" style="text-align: center;"
-                                    readonly />
-                              </p>
-                              <p class="change_link">
-                                 <a href="#tosettings" class="to_register">설정</a>
-                              </p>
-                           </form>
-                        </div>
+		<div class="modal" id="setting" aria-hidden="true"
+			style="display: none; z-index: 1050;">
+			<span id="signinpop">
+				<div class="modal-dialog modal-lg">
+
+					<div class="modal-body">
+						<section>
+							<div id="container_demo">
+								<a class="hiddenanchor" id="tosettings"></a> <a
+									class="hiddenanchor" id="todelete"></a>
+								<div id="wrapper">
+
+									<div id="settings" class="animate form" style="top: 11%;">
+
+										<form id="settingForm" name="mysetting" autocomplete="on"
+											method='post'>
+											<div id=pAndndiv></div>
+											<h1></h1>
+
+											<p>
+												<label for="useremail" class="youmail" data-icon="e">이메일</label>
+												<input id="setemail" name="email" required="required"
+													type="text" readonly="readonly" />
+											</p>
+
+											<p>
+												<label for="username" class="uname" data-icon="u">닉네임
+													변경</label> <input id="nickCheck" name="nickCheck" type="hidden" />
+												<input id="nickBefore" name="nickBefore" type="hidden" /> <input
+													id="setnick" name="nick" required="required" type="text" />
+												<font name="ncheck" size="2" color="red"></font> <br>
+											</p>
+
+											<p>
+												<label for="password" class="youpasswd" data-icon="p">비밀번호
+													변경</label> <input id="localpassword" name="password"
+													required="required" type="password" placeholder="기존 비밀번호" />
+
+											</p>
+
+											<p>
+												<input id="setpassword" name="password" required="required"
+													type="password" placeholder="새 비밀번호" /> <font
+													name="prcheck" size="2" color="red"></font> <br>
+											</p>
+
+											<p>
+												<input id="setpassword_confirm" name="password"
+													required="required" type="password" placeholder="새 비밀번호 확인" />
+												<font name="pcheck" size="2" color="red"></font>
+											</p>
+											<p class="change_link" style="margin-top: 80px;">
+												<a href="#todelete" class="to_register" style="width: 78px;">회원탈퇴
+												</a>
+											</p>
+											<p class="change button">
+												<input id="change" name="changebtn" value="변경"
+													style="text-align: center;" readonly />
+											</p>
+										</form>
+									</div>
 
 
+									<div id="delete" class="animate form" style="top: 11%;">
+										<form name="deletecheck" autocomplete="on">
+											<h1>회원탈퇴</h1>
+											<p>
+												<label for="deletepassword" class="youpasswd" data-icon="p">본인
+													확인을 위하여 비밀번호를 입력해 주세요</label> <input id="mailCheck"
+													name="mailCheck" type="hidden" /> <input
+													id="deletepassword" name="deletepassword"
+													required="required" type="password" />
+											</p>
+											<p class="delete button">
+												<input id="deletebtn" value="탈퇴" style="text-align: center;"
+													readonly />
+											</p>
+											<p class="change_link">
+												<a href="#tosettings" class="to_register">설정</a>
+											</p>
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</span>
+		</div>
+
+		<video autoplay loop poster="../images/strip.jpg" id="bgvid">
+			<source src="../images/search_back.mp4" type="video/mp4">
+		</video>
+
+	</div>
+
+	<div class="textbox">
+		<div class="mywordtext" style="text-align: center;">
+			<font size="6">나의 단어장</font><br>
+			<!-- ============================START============================ -->
+			<span class='countspan'> <select id="assosCount"
+				onchange="loadPaging()">
+					<option selected='selected' value='3'>3개씩 보기</option>
+					<option value='5'>5개씩 보기</option>
+					<option value='10'>10개씩 보기</option>
+			</select>
+			</span>
+			<!-- ============================END============================ -->
+		</div>
+	</div>
+
+	<div class="line" align="center"></div>
+
+	<div class="container">
+		<!-- Top Navigation -->
+		<ul class="grid effect-2" id="grid">
+		</ul>
+		<div class="paginate" align="center">
+			<ul class="pagination">
+
+			</ul>
+		</div>
+	</div>
 
 
+	<!-- 설정 팝업! -->
 
-                     </div>
-                  </div>
-               </section>
-            </div>
-         </div>
-      </span>
-   </div>
 
-     <video autoplay loop poster="../images/strip.jpg" id="bgvid">
-     <source src="../images/search_back.mp4" type="video/mp4">
-    </video>
-     
-   </div>
-
-   <div class="textbox">
-    <div class="mywordtext" style="text-align:center;">
-      <font size="6">나의 단어장</font><br>
-      <span class='countspan'>
-      <select id="assosCount" onchange="loadPaging()">
-        <option selected='selected' value='3'>3개씩 보기</option>
-        <option value='5'>5개씩 보기</option>
-        <option value='10'>10개씩 보기</option>
-       </select>
-       </span>
-    </div>
-  </div>
-  
- <div class="line" align="center"> </div>
-
-   <div class="container">
-         <!-- Top Navigation -->
-         <ul class="grid effect-2" id="grid">
-         </ul>
-         <div class="paginate" align="center">
-   		 <ul class="pagination">
-   		 
-   		 </ul>
-         </div>
-   </div>
-      
- 
- <!-- 설정 팝업! -->
-	
-	
 	<div class="modal" id="setting" aria-hidden="true"
 		style="display: none; z-index: 1050;">
 		<span id="signinpop">
 			<div class="modal-dialog modal-lg">
-               
-   		
+
+
 				<div class="modal-body">
 					<section>
 						<div id="container_demo">
 							<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
-							<a class="hiddenanchor" id="tosettings"></a>
-							<a class="hiddenanchor" id="todelete"></a>
+							<a class="hiddenanchor" id="tosettings"></a> <a
+								class="hiddenanchor" id="todelete"></a>
 							<div id="wrapper">
-								
+
 								<div id="settings" class="animate form">
-									
-									<form id="settingForm" name="mysetting" autocomplete="on" method='post'>
-									<div id=pAndndiv>
-										<!-- <img src="../images/profile.png" id="imgPreview" class="settingpro" width="100" height="100">
+
+									<form id="settingForm" name="mysetting" autocomplete="on"
+										method='post'>
+										<div id=pAndndiv>
+											<!-- <img src="../images/profile.png" id="imgPreview" class="settingpro" width="100" height="100">
 										<h3 align="center">김현지  <input id="inputfiles" type="file" name="photo"></input><img class="cameraimg" src="../images/cameraicon.png" width="30" height="30"></h3><br> -->
-									</div>
+										</div>
 										<h1></h1>
-										
-									     	<p>
+
+										<p>
 											<label for="useremail" class="youmail" data-icon="e">이메일</label>
-											<input id="setemail" name="email" required="required" type="text" readonly="readonly"/>
+											<input id="setemail" name="email" required="required"
+												type="text" readonly="readonly" />
 										</p>
-										
+
 										<p>
-											<label for="username" class="uname" data-icon="u">닉네임 변경</label>
-											<input id="nickCheck" name="nickCheck" type="hidden"/>
-											<input id="nickBefore" name="nickBefore" type="hidden"/>
-											
-											<input id="setnick" name="nick" required="required" type="text"/>
-											    <font name="ncheck" size="2" color="red"></font> <br>
+											<label for="username" class="uname" data-icon="u">닉네임
+												변경</label> <input id="nickCheck" name="nickCheck" type="hidden" /> <input
+												id="nickBefore" name="nickBefore" type="hidden" /> <input
+												id="setnick" name="nick" required="required" type="text" />
+											<font name="ncheck" size="2" color="red"></font> <br>
 										</p>
-										
+
 										<p>
-											<label for="password" class="youpasswd" data-icon="p">비밀번호 변경</label>
-											<input id="localpassword" name="password" required="required" type="password"
-											    placeholder="기존 비밀번호" />
-											
+											<label for="password" class="youpasswd" data-icon="p">비밀번호
+												변경</label> <input id="localpassword" name="password"
+												required="required" type="password" placeholder="기존 비밀번호" />
+
 										</p>
-										
+
 										<p>
-											<input id="setpassword" name="password"  required="required" type="password"
-											    placeholder="새 비밀번호" />
-											<font name="prcheck" size="2" color="red"></font> <br>
+											<input id="setpassword" name="password" required="required"
+												type="password" placeholder="새 비밀번호" /> <font
+												name="prcheck" size="2" color="red"></font> <br>
 										</p>
-										
+
 										<p>
-											<input id="setpassword_confirm" name="password" required="required" type="password"
-											    placeholder="새 비밀번호 확인" />
-											    <font name="pcheck" size="2" color="red"></font> 
+											<input id="setpassword_confirm" name="password"
+												required="required" type="password" placeholder="새 비밀번호 확인" />
+											<font name="pcheck" size="2" color="red"></font>
 										</p>
-									<p class="change_link" style="margin-top: 80px;">
-										<a href="#todelete" class="to_register" style="width:78px;">회원탈퇴 </a>
-									</p>
-									<p class="change button">
-										<input  id="change" name="changebtn" value="변경" style="text-align:center;" readonly />
-									</p>
+										<p class="change_link" style="margin-top: 80px;">
+											<a href="#todelete" class="to_register" style="width: 78px;">회원탈퇴
+											</a>
+										</p>
+										<p class="change button">
+											<input id="change" name="changebtn" value="변경"
+												style="text-align: center;" readonly />
+										</p>
 									</form>
-							</div>
-							
-							
-							<div id="delete" class="animate form">
+								</div>
+
+
+								<div id="delete" class="animate form">
 									<form name="deletecheck" autocomplete="on">
 										<h1>회원탈퇴</h1>
 										<p>
-											<label for="deletepassword" class="youpasswd" data-icon="p">본인 확인을 위하여 비밀번호를 입력해 주세요</label> 
-											<input id="mailCheck" name="mailCheck" type="hidden"/>
-												<input id="deletepassword" name="deletepassword"
-												required="required" type="password"/>
+											<label for="deletepassword" class="youpasswd" data-icon="p">본인
+												확인을 위하여 비밀번호를 입력해 주세요</label> <input id="mailCheck" name="mailCheck"
+												type="hidden" /> <input id="deletepassword"
+												name="deletepassword" required="required" type="password" />
 										</p>
 										<p class="delete button">
-											<input id="deletebtn" value="탈퇴" style="text-align:center;" readonly/>
+											<input id="deletebtn" value="탈퇴" style="text-align: center;"
+												readonly />
 										</p>
 										<p class="change_link">
 											<a href="#tosettings" class="to_register">설정</a>
@@ -624,8 +723,8 @@ font {
 			</div>
 		</span>
 	</div>
- 
- <script>
+
+	<script>
 loadPhoto();
 function loadPhoto() {	
 	$.getJSON("../ajax/member/list.do", function(result) {
@@ -642,13 +741,14 @@ function loadPhoto() {
 	})
 }
 </script>
-   
-      <script src="../bower_components/masonry/dist/masonry.pkgd.js"></script>
-      <script src="../bower_components/imagesloaded/imagesloaded.js"></script>
-      <script src="../bower_components/classie/classie.js"></script>
-      <script src="../js/AnimOnScroll.js"></script>
-   <script>
+
+	<script src="../bower_components/masonry/dist/masonry.pkgd.js"></script>
+	<script src="../bower_components/imagesloaded/imagesloaded.js"></script>
+	<script src="../bower_components/classie/classie.js"></script>
+	<script src="../js/AnimOnScroll.js"></script>
+	<script>
    loadAsso();
+ <!-- ============================START============================ -->
    function loadAsso() {
       $.getJSON("../ajax/myWord/list.do", {pageNo : 1, pageSize:$("#assosCount").val()}, function (result) {
          var ul = $("#grid");
@@ -681,26 +781,6 @@ function loadPhoto() {
    
    </script>
 	<script>
-	loadPhoto()
-function loadPhoto() {	
-	$.getJSON("../ajax/member/list.do", function(result) {
-		var headerdiv = $('#d1');
-		var pAndndiv = $('#pAndndiv');
-		var list = result.list;
-		
-		$("<div class='menubar'>").html("<ul>" + 
-				"<li><a href='#' id='current'><div class='mypage'><div class='imgdiv'><img class='thumbnail' src='" + list[0].photo + "' width='45' height='45'></div><div class='name'><font size='3'>" + list[0].nick + "</font></div></div></a>" + 
-				"<ul><li><a href='location:;'>받은좋아요 <img src='../images/mainlikewhite.png' width='20px' height='20px'><font align='right'> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>" + 
-				"<li><a data-toggle=\"modal\" href='#setting'>설정</a></li><li><a href='../auth/logout.do'>로그아웃</a></li></ul>" +
-				"</li></ul>").appendTo(headerdiv);
-		$('#sign').css("display", "none");
-		
-		$("<img src='" + list[0].photo + "' id='imgPreview' class='settingpro' width='100' height='100'>" +
-			"<h3 align='center'>" + list[0].nick + "<input id='inputfiles' type='file' name='photo'></input><img class='cameraimg' src='../images/cameraicon.png' width='30' height='30'></h3><br>").appendTo(pAndndiv);
-	})
-}
-</script>
-<script>
   function goPage(i) {
     $(document).ready(function () {       
     // Ajax 통신으로 서버에 Data를 전송하고 Return 받습니다.
@@ -744,8 +824,8 @@ function loadPhoto() {
                });
               }});});
    }              
-</script>   
-<script>
+</script>
+	<script>
   function loadPaging() {
     $(document).ready(function () {       
     // Ajax 통신으로 서버에 Data를 전송하고 Return 받습니다.
@@ -788,6 +868,28 @@ function loadPhoto() {
                });
               }});});
    }              
-</script> 
+</script>
+	<!-- ============================END============================ -->
+	<script>
+	loadPhoto()
+function loadPhoto() {	
+	$.getJSON("../ajax/member/list.do", function(result) {
+		var headerdiv = $('#d1');
+		var pAndndiv = $('#pAndndiv');
+		var list = result.list;
+		
+		$("<div class='menubar'>").html("<ul>" + 
+				"<li><a href='#' id='current'><div class='mypage'><div class='imgdiv'><img class='thumbnail' src='" + list[0].photo + "' width='45' height='45'></div><div class='name'><font size='3'>" + list[0].nick + "</font></div></div></a>" + 
+				"<ul><li><a href='location:;'>받은좋아요 <img src='../images/mainlikewhite.png' width='20px' height='20px'><font align='right'> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>" + 
+				"<li><a data-toggle=\"modal\" href='#setting'>설정</a></li><li><a href='../auth/logout.do'>로그아웃</a></li></ul>" +
+				"</li></ul>").appendTo(headerdiv);
+		$('#sign').css("display", "none");
+		
+		$("<img src='" + list[0].photo + "' id='imgPreview' class='settingpro' width='100' height='100'>" +
+			"<h3 align='center'>" + list[0].nick + "<input id='inputfiles' type='file' name='photo'></input><img class='cameraimg' src='../images/cameraicon.png' width='30' height='30'></h3><br>").appendTo(pAndndiv);
+	})
+}
+</script>
+
 </body>
 </html>

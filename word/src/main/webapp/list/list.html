@@ -151,7 +151,7 @@ label, .h3 {
      <source src="../images/search_back.mp4" type="video/mp4">
     </video>
 </div>
-
+<!-- ============================START============================ -->
 <div id="d2" class="container">
    <div id="resultword" align="right"></div>
    <div id="resultmean" align="left"></div>
@@ -310,6 +310,7 @@ label, .h3 {
 </form>
 </div>
 <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ============================END============================ -->
 <div id="d3">
    <div class="line" align="center"><img src="../images/line.jpg" alt="line" /></div>
    <ul id="list">
@@ -430,7 +431,7 @@ function loadPhoto() {
 }
 </script>
 
-
+<!-- ============================START============================ -->
 <script type="text/javascript">
         $(function() {
             $("#inputFile").on('change', function(){
@@ -828,39 +829,11 @@ function hatePlus(index) {
 		    );}
 	 );});
 	}	
-	
-	
-	
 </script>
+<!-- ============================END============================ -->
 <script>
 function loadAsso(word) {
 	$("<input type='hidden' id='wordTo' name='word' value='" + word + "'>").html("").appendTo("#myModal");
-	/* $.getJSON("../ajax/searchList/list.do?word=" + word, function (result) {
-		var ul = $("#list");
-		var list = result.list;
-		if (list[0] == null) {
-			$("<div id='noword' align='center'>").html("<font face='나눔스퀘어'><h3>해당하는 연상법이 없습니다.</h3></font></div>").appendTo(ul);
-		} else {
-			  for (var i in list) {
-				  $("<li>").html("<span class='nic' align='left'><strong>" + list[i].nick + "</strong></span>" +
-					"<span class='date'>" + list[i].date + "</span>" +
-					"<span class='word'><h3><strong>" + list[i].word + "</strong></h3></span>" +
-					"<span class='mean'>" + list[i].mean + "</span>" +
-					"<span class='weeks'><h4><strong id='asso" + i + "'>" + list[i].asso + "</strong></h4></span>" +
-					"<span class='num'><h4 id='likeNo" + i + "'>" + list[i].likeNo + "</h4></span>" +
-					"<span class='num2'><h4 id='hateNo" + i + "'>" + list[i].hateNo + "</h4></span>" +
-					"<span class='cracker'><img src='" + list[i].assothumPath + "' alt='' width='165px'/></span>" +
-					"<span class='profile'><img src='../images/profile.png' alt='profile' width='85px'/></span>" +
-					"<span class='star'><a href='javascript:;' class='favor" + i + "' onclick='favorChange(" + i + ")'></a></span>" +
-					"<span class='like'><img onclick='likePlus(" + i + ")' src='../images/like.png' alt='like' width='30px'/></span>" +
-					"<span class='hate'><img onclick='hatePlus(" + i + ")' src='../images/hate.png' alt='hate' width='30px' /></span>" +
-					"<div class='line2' align='center'><img  src='../images/line.jpg' alt='line' /></div>")
-					.appendTo(ul);
-	
-				  setFavor(i);
-			  }
-		}
-	}); */
 	$.ajax({
 		  type: 'POST',
 		  url: "../ajax/searchList/list.do",

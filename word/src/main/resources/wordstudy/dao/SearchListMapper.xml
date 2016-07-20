@@ -19,6 +19,7 @@
     <result column="PHOT"    property="prophotPath"/>
   </resultMap>
 
+  <!-- ============================START============================ --> 
     
   <insert id="insert" parameterType="SearchList">
     insert into assos(MENO, MNO, ASSO, A_PHOT, HINT, DATE, BEST, LIKES, HATES, FAVOR, A_THUM) 
@@ -82,6 +83,10 @@
     select likes from my_LOH where mno=#{mno}
     and ano=#{ano};   
   </select>
+  
+   <select id="findAsso" resultType="int" parameterType="SearchList">
+    select ano from assos where mno=#{mno} and ano=#{ano}
+  </select> 
     
   <select id="hates" resultType="Integer" parameterType="SearchList">
     select hates from my_LOH where mno=#{mno}
@@ -103,11 +108,7 @@
     update my_loh set hates=1 where mno=#{mno}
     and ano=#{ano}
   </update>
-  <!--   
-  <delete id="delete" parameterType="int">
-    delete from BOARDS 
-    where BNO=#{no}
-  </delete> -->
+<!-- ============================END============================ -->
  
   <select id="selectList" resultMap="SearchListMap" parameterType="map">
     SELECT W.WORD, M.MEAN, A.ANO, A.ASSO, A.LIKES, A.HATES, A.A_PHOT, R.PHOT, A.FAVOR, R.NIC, A.DATE, A.A_THUM, A.ANO 
@@ -118,11 +119,7 @@
 		AND W.WORD = #{word}
     order by A.LIKES DESC
   </select>
-    
-  <select id="findAsso" resultType="int" parameterType="SearchList">
-    select ano from assos where mno=#{mno} and ano=#{ano}
-  </select> 
-  
+
   <select id="countAll" resultType="int">
     select count(*) 
     from ASSOS;

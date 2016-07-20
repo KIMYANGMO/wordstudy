@@ -5,8 +5,6 @@ import java.util.Map;
 
 import wordstudy.vo.SearchList;
 
-
-
 public interface SearchListDao {
   List<SearchList> selectList(Map<String,Object> paramMap);
   SearchList selectOne(Map<String, Object> paramMap);
@@ -15,6 +13,7 @@ public interface SearchListDao {
   int delete(int no);
   int isSearchList(Map<String,Object> paramMap);
   int countAll();
+  /*-----------------------------START----------------------------*/
   SearchList wordList(SearchList searchList);
   void wordMeanAdd(SearchList searchList);
   void wordAdd(SearchList searchList);
@@ -30,6 +29,7 @@ public interface SearchListDao {
   void assoUpdate(SearchList searchList);
   void assoListDelete(SearchList searchList);
   int findAsso(SearchList searchList);
+  /*-----------------------------END----------------------------*/
 }
 
 

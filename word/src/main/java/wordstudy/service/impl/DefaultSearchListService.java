@@ -15,6 +15,7 @@ import wordstudy.vo.SearchList;
 public class DefaultSearchListService implements SearchListService {
   @Autowired SearchListDao searchListDao;
   
+  /*-----------------------------START----------------------------*/
   public void add(SearchList searchList) {
     searchListDao.insert(searchList);
   }
@@ -57,11 +58,7 @@ public class DefaultSearchListService implements SearchListService {
   public void wordMeanAdd(SearchList searchList) {
     searchListDao.wordMeanAdd(searchList);
   }
-  /*
-  public void delete(int no) {
-    searchListDao.delete(no);
-  } */
-  
+
   public int findAsso(SearchList searchList) {    
     return searchListDao.findAsso(searchList);
   }
@@ -83,7 +80,8 @@ public class DefaultSearchListService implements SearchListService {
     return searchListDao.assoList(searchList);
   }
   
-
+  /*-----------------------------END----------------------------*/
+  
   public List<SearchList> list(String word) {
     HashMap<String,Object> paramMap = new HashMap<>();
     paramMap.put("word", word);
@@ -122,17 +120,6 @@ public class DefaultSearchListService implements SearchListService {
     return null;
   }
   
-  /*public void change(SearchList searchList) {
-    searchListDao.update(searchList);
-  }
-
-  public int countPage(int pageSize) {
-    int count = searchListDao.countAll();
-    int pages = count / pageSize;
-    if ((count % pageSize) > 0)
-      pages++;
-    return pages;
-  }*/
 }
 
 /*
