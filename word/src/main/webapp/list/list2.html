@@ -11,7 +11,7 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- font awesome -->
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="../css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- Custom Style -->
     <link href="../css/style.css" rel="stylesheet">
 
@@ -22,18 +22,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></scri.row>.containerpt>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-<link rel="stylesheet" type="text/css" href="../css/list5.css">
+<link rel="stylesheet" type="text/css" href="../css/list6.css">
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <style>
 body {
-   background-color: #F5F0E6;
+	background-color: #F5F0E6;
 }
 .assohint {
    cursor: pointer;
@@ -44,7 +41,7 @@ body {
 }
 
 .favorOn {
-   display: inline-block;
+	display: inline-block;
   overflow: hidden;
   width: 40px;
   height: 40px!important;
@@ -55,7 +52,7 @@ body {
   text-indent: -9000px;
 }
 .favorOff {
-   display: inline-block;
+	display: inline-block;
   overflow: hidden;
   width: 40px;
   height: 40px!important;
@@ -66,9 +63,9 @@ body {
   text-indent: -9000px;
 }
 .card1 {
-   background-color: white;
-   width: 200px;
-   height: 200px;
+	background-color: white;
+	width: 200px;
+	height: 200px;
 }
 .thumbnail {
   position: absolute;
@@ -78,9 +75,13 @@ body {
   margin: -170px -200px 0 200px; */
 }
 
+
 </style>
+
+
   </head>
   <body>
+  
 <div id="d1">
    <span id="threediv">
    <nav>
@@ -93,28 +94,12 @@ body {
     </nav>
     </span>
    <div id="logodiv" align="center"><a href="../main/main.html"><img src="../images/logo.png" id="logo"/></a></div>
-   <div id="searchdiv" align="center">
+   <div id="topsearchdiv" align="center">
    <form method="get" action="../list/list.html">
-   <input id="search" name="word" type="text" value="search"  onfocus="this.value=''" onblur="if(this.value =='') this.value='search';"/>
+   <input id="topsearch" name="word" type="text" value="search"  onfocus="this.value=''" onblur="if(this.value =='') this.value='search';"/>
    </form>
    </div>
    
-   <div class="menubar">
-       <ul>
-         <li><a href="#" id="current">
-           <div class="mypage">
-             <div class="imgdiv"><img class="thumbnail" src="https://d12hfz37g51hrt.cloudfront.net/assets/default/user/photo_small-eb39055bd595b4f8b1a0d54e41ecf088.jpg" width="45" height="45"></div>
-              <div class="name"><font size="3">김현지</font></div>
-          </div>
-             </a>
-           <ul>
-           <li><a href="location:;">받은좋아요 <img src="../images/mainlikewhite.png" width="20px" height="20px"><font align="right"> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>
-           <li><a href="#">설정</a></li>
-           <li><a href="../auth/logout.do">로그아웃</a></li>
-          </ul>
-         </li>
-      </ul>
-    </div>
    
    <video autoplay loop poster="../images/strip.jpg" id="bgvid">
      <source src="../images/search_back.mp4" type="video/mp4">
@@ -125,7 +110,7 @@ body {
    <div id="resultword" align="right"></div>
    <div id="resultmean" align="left"></div>
    <div id="enrolldiv" align="center">
-      <img data-toggle="modal" href="#myModal" src="../images/enroll.jpg" alt="signin" />
+ 		 <img data-toggle="modal" href="#myModal" src="../images/enroll.jpg" alt="signin" />
    </div>
    <div class="contain_box">
       <div class="container">
@@ -141,8 +126,8 @@ body {
     <form method="post" name="modalForm" id="modalForm" >
     <div class="modal" id="myModal" aria-hidden="true" style="display: none; z-index: 1050;">
        
-       <div class="modal-dialog modal-lg">
-          <div class="modal-content">
+       <div class="modal-dialog modal-lg add-modal-dialog">
+          <div class="modal-content add-modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
@@ -151,28 +136,28 @@ body {
             </div><div class="container"></div>
             <div class="modal-body">
               
-                     <div class="form-group">
-                        <fieldset>
-                           <select name="mean" id="Means">
-                              
-                             
-                           </select>
-                        </fieldset>
-                     </div>
-                     
-                     <div class="form-group">
-                        <textarea class="form-control" id="message-text" placeholder="연상법" name="asso"></textarea>
-                     </div>
-                     <div class="form-group" id="imgArea">       
-                       <img id="imgPreview" src="" alt="이곳에 선택된 이미지가 표시됩니다."> 
-                       <input id="inputFile" type="file" name="photo"></input>
-                     </div>
+					      <div class="form-group">
+					         <fieldset>
+					            <select name="mean" id="Means">
+					               
+					              
+					            </select>
+					         </fieldset>
+					      </div>
+					      
+					      <div class="form-group">
+					         <textarea class="form-control" id="message-text" placeholder="연상법" name="asso"></textarea>
+					      </div>
+					      <div class="form-group" id="imgArea">       
+					        <img id="as_imgPreview" src="" alt="이곳에 선택된 이미지가 표시됩니다."> 
+					        <input id="inputFile" type="file" name="photo"></input>
+					      </div>
             </div>
             
-            <div class="modal-footer">
+            <div class="modal-footer add-modal-footer">
               <wrapper id="wrapper">
               <p class="change_link">
-                 <a id="btn_submit" data-toggle="modal" href="#myModal2" class="to_register" onclick="changeValue()">다음</a>
+              	<a id="btn_submit" data-toggle="modal" href="#myModal2" class="to_register" onclick="changeValue()">다음</a>
               </p>
               </wrapper>
             </div>
@@ -181,9 +166,9 @@ body {
     </div>
     <!-- second modal -->
     <div class="modal" id="myModal2" aria-hidden="true" style="display: none; z-index: 1060;">
-       <div class="popup">
+       <div class="popup addpopup">
        <div class="modal-dialog modal-lg">
-          <div class="modal-content second-content">
+          <div class="modal-content second-content add-second-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <h4 class="modal-title" id="exampleModalLabel"><font size="6">힌트가 되는 뜻 부분 체크</font></h4>
@@ -196,9 +181,9 @@ body {
             </div>
             <div class="modal-footer">
               <wrapper id=wrapper class="second-wrapper" style="top:270px">
-                 <p class="login button">
-                    <input type="submit" class="submitbtn" id="assoaddbtn" value="확인"/>
-                 </p>
+	              <p class="login button addbutton">
+	              	<input type="submit" class="submitbtn" id="assoaddbtn" value="확인"/>
+	              </p>
               <wrapper>
             </div>
           </div>
@@ -213,12 +198,125 @@ body {
    </ul>
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<!-- 설정 팝업! -->
+	
+	
+<div class="modal" id="setting" aria-hidden="true"
+		style="display: none; z-index: 1050;">
+		<span id="signinpop">
+			<div class="modal-dialog modal-lg">
+
+				<div class="modal-body">
+					<section>
+						<div id="container_demo">
+							hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4 
+							<a class="hiddenanchor" id="tosettings"></a>
+							<a class="hiddenanchor" id="todelete"></a>
+							<div id="wrapper">
+								
+								<div id="settings" class="animate form">
+									
+									<form id="settingForm" name="mysetting" autocomplete="on" method='post'>
+									<div id=pAndndiv>
+										<img src="../images/profile.png" id="imgPreview" class="settingpro" width="100" height="100">
+										<h3 align="center">김현지  <input id="inputfiles" type="file" name="photo"></input><img class="cameraimg" src="../images/cameraicon.png" width="30" height="30"></h3><br>
+									</div>
+										<h1></h1>
+										
+									     	<p>
+											<label for="useremail" class="youmail" data-icon="e">이메일</label>
+											<input id="setemail" name="email" required="required" type="text" readonly="readonly"/>
+										</p>
+										
+										<p>
+											<label for="username" class="uname" data-icon="u">닉네임 변경</label>
+											<input id="nickCheck" name="nickCheck" type="hidden"/>
+											<input id="nickBefore" name="nickBefore" type="hidden"/>
+											
+											<input id="setnick" name="nick" required="required" type="text"/>
+											    <font name="ncheck" size="2" color="red"></font> <br>
+										</p>
+										
+										<p>
+											<label for="password" class="youpasswd" data-icon="p">비밀번호 변경</label>
+											<input id="localpassword" name="password" required="required" type="password"
+											    placeholder="기존 비밀번호" />
+											
+										</p>
+										
+										<p>
+											<input id="setpassword" name="password"  required="required" type="password"
+											    placeholder="새 비밀번호" />
+											<font name="prcheck" size="2" color="red"></font> <br>
+										</p>
+										
+										<p>
+											<input id="setpassword_confirm" name="password" required="required" type="password"
+											    placeholder="새 비밀번호 확인" />
+											    <font name="pcheck" size="2" color="red"></font> 
+										</p>
+									<p class="change_link" style="margin-top: 80px;">
+										<a href="#todelete" class="to_register" style="width:78px;">회원탈퇴 </a>
+									</p>
+									<p class="change button">
+										<input  id="change" name="changebtn" value="변경" style="text-align:center;" readonly />
+									</p>
+									</form>
+							</div>
+							
+							
+							<div id="delete" class="animate form">
+									<form name="deletecheck" autocomplete="on">
+										<h1>회원탈퇴</h1>
+										<p>
+											<label for="deletepassword" class="youpasswd" data-icon="p">본인 확인을 위하여 비밀번호를 입력해 주세요</label> 
+											<input id="mailCheck" name="mailCheck" type="hidden"/>
+												<input id="deletepassword" name="deletepassword"
+												required="required" type="password"/>
+										</p>
+										<p class="delete button">
+											<input id="deletebtn" value="탈퇴" style="text-align:center;" readonly/>
+										</p>
+										<p class="change_link">
+											<a href="#tosettings" class="to_register">설정</a>
+										</p>
+									</form>
+								</div>
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</span>
+	</div>
 
 
+
+<script>
+loadPhoto();
+function loadPhoto() {	
+	$.getJSON("../ajax/member/list.do", function(result) {
+		var headerdiv = $('#d1');
+		var pAndndiv = $('#pAndndiv');
+		var list = result.list;
+		
+		$("<div class='menubar'>").html("<ul>" + 
+				"<li><a href='#' id='current'><div class='mypage'><div class='imgdiv'><img class='thumbnail' src='" + list[0].photo + "' width='45' height='45'></div><div class='name'><font size='3'>" + list[0].nick + "</font></div></div></a>" + 
+				"<ul><li><a href='location:;'>받은좋아요 <img src='../images/mainlikewhite.png' width='20px' height='20px'><font align='right'> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>" + 
+				"<li><a data-toggle=\"modal\" href='#setting'>설정</a></li><li><a href='../auth/logout.do'>로그아웃</a></li></ul>" +
+				"</li></ul>").appendTo(headerdiv);
+		$('#sign').css("display", "none");
+		
+		$("<img src='" + list[0].photo + "' id='imgPreview' class='settingpro' width='100' height='100'>" +
+			"<h3 align='center'>" + list[0].nick + "<input id='inputfiles' type='file' name='photo'></input><img class='cameraimg' src='../images/cameraicon.png' width='30' height='30'></h3><br>").appendTo(pAndndiv);
+	})
+}
+</script>
 
 
 <script type="text/javascript">
@@ -233,7 +331,7 @@ body {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                    $('#imgPreview').attr('src', e.target.result);
+                    $('#as_imgPreview').attr('src', e.target.result);
                 }
 
               reader.readAsDataURL(input.files[0]);
@@ -245,23 +343,23 @@ body {
 
 <script>
   $("#modalForm").submit(function(event) {   
-      event.preventDefault();
-     
-      var fd = new FormData($(this)[0]);
+	   event.preventDefault();
+	  
+	   var fd = new FormData($(this)[0]);
      $.ajax({
-            url:"../ajax/searchList/add.do",
-            type:"POST",
-            data: fd,
-            async:true,
-            cache:false,
-            contentType:false,
-            processData:false,
+    	 	 url:"../ajax/searchList/add.do",
+    	 	 type:"POST",
+    	 	 data: fd,
+    	 	 async:true,
+    	 	 cache:false,
+    	 	 contentType:false,
+    	 	 processData:false,
          success: function(data) {
-               window.location.reload();
+     			 window.location.reload();
          }
        });
      return false;
-      });
+  	 });
 </script>
 
 
@@ -279,7 +377,7 @@ body {
      }
 </script> -->
 <script>
-      
+		
 
 </script>
 
@@ -299,209 +397,340 @@ body {
 </script>
   
 <script type= "text/javascript">
-  function changeValue2(index){      
-     $(document).ready(function () {        
-         document.getElementById("text"+index).setAttribute( 'class', 'assohint');
-         document.getElementById("text"+index).setAttribute( 'onClick', 'changeValue3(' + index + ')');
-         var hint = $("span[class='assohint']").text();
-         
-         $("<input type='hidden' name='hint' value='" + hint + "'>").html("").appendTo("#assos");
-         
-      });     
+  function changeValue2(index){		
+	  $(document).ready(function () {	  	
+			document.getElementById("text"+index).setAttribute( 'class', 'assohint');
+			document.getElementById("text"+index).setAttribute( 'onClick', 'changeValue3(' + index + ')');
+			var hint = $("span[class='assohint']").text();
+			
+			$("<input type='hidden' name='hint' value='" + hint + "'>").html("").appendTo("#assos");
+			
+      });	  
     }
   </script>
   <script type= "text/javascript">
-  function changeValue3(index){      
-     $(document).ready(function () {        
-         document.getElementById("text"+index).setAttribute( 'class', 'assotext');
-         document.getElementById("text"+index).setAttribute( 'onClick','changeValue2(' + index + ')');        
-      });     
+  function changeValue3(index){		
+	  $(document).ready(function () {	  	
+			document.getElementById("text"+index).setAttribute( 'class', 'assotext');
+			document.getElementById("text"+index).setAttribute( 'onClick','changeValue2(' + index + ')');	  	
+      });	  
     }
   </script>
     
 <script>
 var getParameter = function (param) {
-   var returnValue;
-   var url = location.href;
-   var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&');
-   for (var i = 0; i < parameters.length; i++) {
-      var varName = parameters[i].split('=')[0];
-      if (varName.toUpperCase() == param.toUpperCase()) {
-         returnValue = parameters[i].split('=')[1];
-         return decodeURIComponent(returnValue);
-      }
-   }
+	var returnValue;
+	var url = location.href;
+	var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&');
+	for (var i = 0; i < parameters.length; i++) {
+		var varName = parameters[i].split('=')[0];
+		if (varName.toUpperCase() == param.toUpperCase()) {
+			returnValue = parameters[i].split('=')[1];
+			return decodeURIComponent(returnValue);
+		}
+	}
 };
 </script>
 <script>
 loadMean();
 
 function loadMean() {
-   $.getJSON("http://192.168.0.61:3000/parseword?word=" + getParameter('word'), function (result) {
+	$.getJSON("http://192.168.0.61:3000/parseword?word=" + getParameter('word'), function (result) {
 
-   $("<font size='15'>").html(result[0].word).appendTo("#resultword");
+	$("<font size='15'>").html(result[0].word).appendTo("#resultword");
      var divMeans1 = document.getElementById("Means");
      var divMeans3 = "<option selected='selected' id='MeansOption'>뜻</option>"; 
-   for (i=1; i < result.length; i++) {
-      $("<font size='4'>").html(result[i].mean + " &nbsp").appendTo("#resultmean");
+	for (i=1; i < result.length; i++) {
+		$("<font size='4'>").html(result[i].mean + " &nbsp").appendTo("#resultmean");
          divMeans3 += "<option>" + result[i].mean.substring(2, result[i].mean.length) + "</option>";                   
          divMeans1.innerHTML = divMeans3;
-   }
-     $.get("../ajax/searchList/wordList.do", {
-               word: result[0].word               
-             }, function(results) {
-               if (results.status == "success") {
-                  console.log(result[0].word + "는 DB에 있다");                  
-               } else {
-                  console.log(result[0].word + "는 DB에 없다");
-                  wordAdd(result[0].word);
-                  wordMeanAdd(result[0].word);
-               }
-             }, "json"     
-           );
-   loadAsso(result[0].word);
-   });
+	}
+	  $.get("../ajax/searchList/wordList.do", {
+			      word: result[0].word			      
+			    }, function(results) {
+			      if (results.status == "success") {
+			    	  console.log(result[0].word + "는 DB에 있다");			    	  
+			      } else {
+			    	  console.log(result[0].word + "는 DB에 없다");
+			    	  wordAdd(result[0].word);
+			    	  wordMeanAdd(result[0].word);
+			      }
+			    }, "json"	  
+			  );
+	loadAsso(result[0].word);
+	});
 }
 </script>
 <script>
 function wordAdd(word) {
-    $(document).ready(function () {
-        $.get("../ajax/searchList/wordAdd.do", {
-            word: word
-          }, function(result) {
-            if (result.status == "success") {
-              console.log(word);
-            } else {
-              /* window.alert("단어 등록 실패입니다!"); */
-            }
-            
-          }, "json"     
-        );
-          });
-      }
+	 $(document).ready(function () {
+		  $.get("../ajax/searchList/wordAdd.do", {
+		      word: word
+		    }, function(result) {
+		      if (result.status == "success") {
+		    	 console.log(word);
+		      } else {
+		        /* window.alert("단어 등록 실패입니다!"); */
+		      }
+		      
+		    }, "json"	  
+		  );
+	 		});
+		}
 </script>
 <script>
 function wordMeanAdd(word) {
-      $.getJSON("http://192.168.0.61:3000/parseword?word=" + getParameter('word'), function (result) {
-      for (i=1; i < result.length; i++) {         
-          $.get("../ajax/searchList/wordMeanAdd.do", {
-            word: word,
-            mean: result[i].mean.substring(2, result[i].mean.length)            
-          }, function(result) {
-            if (result.status == "success") {               
-               /* window.alert("단어뜻 등록 성공입니다!"); */               
-            } else {
-              /* window.alert("단어뜻 등록 실패입니다!"); */
-            }
-          }, "json"     
-        );}});
-      }
+		$.getJSON("http://192.168.0.61:3000/parseword?word=" + getParameter('word'), function (result) {
+		for (i=1; i < result.length; i++) {			
+			 $.get("../ajax/searchList/wordMeanAdd.do", {
+		      word: word,
+		      mean: result[i].mean.substring(2, result[i].mean.length)		      
+		    }, function(result) {
+		      if (result.status == "success") {		    	  
+		    	  /* window.alert("단어뜻 등록 성공입니다!"); */		    	  
+		      } else {
+		        /* window.alert("단어뜻 등록 실패입니다!"); */
+		      }
+		    }, "json"	  
+		  );}});
+		}
 </script>
 <script>
-function likePlus(index) {   
-   $(document).ready(function () {      
-       $.get("../ajax/searchList/likeOrHate.do", { 
-         asso: $("#asso"+index).text()            
-          }, function(results) {
-            if (results.status == "success") {    
-            $.get("../ajax/searchList/likesUpdate.do", {
-               asso: $("#asso"+index).text()               
-             }, function(results) {
-               if (results.status == "success") {                  
-                  console.log("좋아요++");
-                  var like = $("#likeNo"+index);
-                  like.html($("#likeNo"+index).text() * 1  + 1).appendTo(like);
-                  
-               } else {
-                  console.log("실패다");
-               }
-             }, "json"     
-            );
-             }            
-          else {
-             window.alert("이미 '좋아요' 하신 연상법 입니다.");
-             }},"json" 
-          );}
-    );
-   }
+function likePlus(index) {	
+	$(document).ready(function () {		
+		 $.get("../ajax/searchList/likeOrHate.do", { 
+			asso: $("#asso"+index).text()		      
+		    }, function(results) {
+		      if (results.status == "success") { 	
+				$.get("../ajax/searchList/likesUpdate.do", {
+			      asso: $("#asso"+index).text()			      
+			    }, function(results) {
+			      if (results.status == "success") {			    	  
+			    	  console.log("좋아요++");
+			    	  var like = $("#likeNo"+index);
+			    	  like.html($("#likeNo"+index).text() * 1  + 1).appendTo(like);
+			    	  
+			      } else {
+			    	  console.log("실패다");
+			      }
+			    }, "json"	  
+		      );
+				 }		      
+		    else {
+		    	  $.dialog({
+
+                      // 'alert', 'confirm', 'info' or 'tips'
+                      type : 'alert',     
+                      titleText : '이미 "좋아요" 하신 연상법 입니다.',
+                      showTitle : true,
+                      contentHtml : '',
+                      dialogClass : '',
+                      autoClose : 0,
+                      overlayClose : false,
+                      drag : false,
+
+                      buttonText : {
+                          ok : 'OK',
+                          cancel : 'Cancel',
+                          delete : 'Delete'
+                      },
+                      buttonClass : {
+                          ok : '',
+                          cancel : '',
+                          delete : ''
+                      },
+
+                      infoText : '',      // working in info type
+                      infoIcon : '',      // working in info type
+
+                      onClickOk : function(){},
+                      onClickCancel : function(){},
+                      onClickClose : function(){},
+
+                      onBeforeShow : function(){},
+                      onShow : function(){},
+                      onBeforeClosed : function(){},
+                      onClosed : function(){}
+                      
+                    });
+		    	}},"json" 
+		    );}
+	 );
+	}
+function hatePlus(index) {	
+	$(document).ready(function () {		
+		 $.get("../ajax/searchList/likeOrHate.do", { 
+			asso: $("#asso"+index).text()		      
+		    }, function(results) {
+		      if (results.status == "success") { 	
+				$.get("../ajax/searchList/hatesUpdate.do", {
+			      asso: $("#asso"+index).text()			      
+			    }, function(results) {
+			      if (results.status == "success") {			    	  
+			    	  console.log("싫어요++");
+			    	  var hate = $("#hateNo"+index);
+			    	  hate.html($("#hateNo"+index).text() * 1  + 1).appendTo(hate);
+			    	  
+			      } else {
+			    	  console.log("실패다");
+			      }
+			    }, "json"	  
+		      );
+				 }		      
+		    else {
+		    	  $.dialog({
+
+                      // 'alert', 'confirm', 'info' or 'tips'
+                      type : 'alert',     
+                      titleText : '이미 "싫어요" 하신 연상법 입니다.',
+                      showTitle : true,
+                      contentHtml : '',
+                      dialogClass : '',
+                      autoClose : 0,
+                      overlayClose : false,
+                      drag : false,
+
+                      buttonText : {
+                          ok : 'OK',
+                          cancel : 'Cancel',
+                          delete : 'Delete'
+                      },
+                      buttonClass : {
+                          ok : '',
+                          cancel : '',
+                          delete : ''
+                      },
+
+                      infoText : '',      // working in info type
+                      infoIcon : '',      // working in info type
+
+                      onClickOk : function(){},
+                      onClickCancel : function(){},
+                      onClickClose : function(){},
+
+                      onBeforeShow : function(){},
+                      onShow : function(){},
+                      onBeforeClosed : function(){},
+                      onClosed : function(){}
+                      
+                    });
+		    	}},"json" 
+		    );}
+	 );
+	}	
 </script>
 
 
 <script>
 
 function loadAsso(word) {
-   $("<input type='hidden' id='wordTo' name='word' value='" + word + "'>").html("").appendTo("#myModal");
-   $.getJSON("../ajax/searchList/list.do?word=" + word, function (result) {
-      var ul = $("#list");
-      var list = result.list;
-      if (list[0] == null) {
-         $("<div id='noword' align='center'>").html("<font face='나눔스퀘어'><h3>해당하는 연상법이 없습니다.</h3></font></div>").appendTo(ul);
-      } else {
-        for (var i in list) {
-           $("<li>").html("<span class='nic' align='left'><strong>" + list[i].nick + "</strong></span>" +
-            "<span class='date'>" + list[i].date + "</span>" +
-            "<span class='word'><h3><strong>" + list[i].word + "</strong></h3></span>" +
-            "<span class='mean'>" + list[i].mean + "</span>" +
-            "<span class='weeks'><h4><strong id='asso" + i + "'>" + list[i].asso + "</strong></h4></span>" +
-            "<span class='num'><h4 id='likeNo" + i + "'>" + list[i].likeNo + "</h4></span>" +
-            "<span class='num2'><h4>" + list[i].hateNo + "</h4></span>" +
-            "<span class='cracker'><img src='" + list[i].assothumPath + "' alt='' width='165px'/></span>" +
-            "<span class='profile'><img src='../images/profile.png' alt='profile' width='85px'/></span>" +
-            "<span class='star'><a href='javascript:;' class='favor" + i + "' onclick='favorChange(" + i + ")'></a></span>" +
-            "<span class='like'><img onclick='likePlus(" + i + ")' src='../images/like.png' alt='like' width='30px'/></span>" +
-            "<span class='hate'><img  src='../images/hate.png' alt='hate' width='30px' /></span>" +
-            "<div class='line2' align='center'><img  src='../images/line.jpg' alt='line' /></div>")
-            .appendTo(ul);
-             
-           setFavor(i);
-
-        }
-      }
-   });
+	$("<input type='hidden' id='wordTo' name='word' value='" + word + "'>").html("").appendTo("#myModal");
+	/* $.getJSON("../ajax/searchList/list.do?word=" + word, function (result) {
+		var ul = $("#list");
+		var list = result.list;
+		if (list[0] == null) {
+			$("<div id='noword' align='center'>").html("<font face='나눔스퀘어'><h3>해당하는 연상법이 없습니다.</h3></font></div>").appendTo(ul);
+		} else {
+			  for (var i in list) {
+				  $("<li>").html("<span class='nic' align='left'><strong>" + list[i].nick + "</strong></span>" +
+					"<span class='date'>" + list[i].date + "</span>" +
+					"<span class='word'><h3><strong>" + list[i].word + "</strong></h3></span>" +
+					"<span class='mean'>" + list[i].mean + "</span>" +
+					"<span class='weeks'><h4><strong id='asso" + i + "'>" + list[i].asso + "</strong></h4></span>" +
+					"<span class='num'><h4 id='likeNo" + i + "'>" + list[i].likeNo + "</h4></span>" +
+					"<span class='num2'><h4 id='hateNo" + i + "'>" + list[i].hateNo + "</h4></span>" +
+					"<span class='cracker'><img src='" + list[i].assothumPath + "' alt='' width='165px'/></span>" +
+					"<span class='profile'><img src='../images/profile.png' alt='profile' width='85px'/></span>" +
+					"<span class='star'><a href='javascript:;' class='favor" + i + "' onclick='favorChange(" + i + ")'></a></span>" +
+					"<span class='like'><img onclick='likePlus(" + i + ")' src='../images/like.png' alt='like' width='30px'/></span>" +
+					"<span class='hate'><img onclick='hatePlus(" + i + ")' src='../images/hate.png' alt='hate' width='30px' /></span>" +
+					"<div class='line2' align='center'><img  src='../images/line.jpg' alt='line' /></div>")
+					.appendTo(ul);
+	
+				  setFavor(i);
+			  }
+		}
+	}); */
+	$.ajax({
+		  type: 'POST',
+		  url: "../ajax/searchList/list.do",
+		  data:  {
+			  word : word
+			},
+		  success: function(result) {
+			  var ul = $("#list");
+				var list = result.list;
+				if (list[0] == null) {
+					$("<div id='noword' align='center'>").html("<font face='나눔스퀘어'><h3>해당하는 연상법이 없습니다.</h3></font></div>").appendTo(ul);
+				} else {
+					  for (var i in list) {
+						  $("<li>").html("<span class='nic' align='left'><strong>" + list[i].nick + "</strong></span>" +
+							"<span class='date'>" + list[i].date + "</span>" +
+							"<span class='word'><h3><strong>" + list[i].word + "</strong></h3></span>" +
+							"<span class='mean'>" + list[i].mean + "</span>" +
+							"<span class='weeks'><h4><strong id='asso" + i + "'>" + list[i].asso + "</strong></h4></span>" +
+							"<span class='num'><h4 id='likeNo" + i + "'>" + list[i].likeNo + "</h4></span>" +
+							"<span class='num2'><h4 id='hateNo" + i + "'>" + list[i].hateNo + "</h4></span>" +
+							"<span class='cracker'><img src='" + list[i].assothumPath + "' alt='' width='165px'/></span>" +
+							"<span class='profile'><img src='../images/profile.png' alt='profile' width='85px'/></span>" +
+							"<span class='star'><a href='javascript:;' class='favor" + i + "' onclick='favorChange(" + i + ")'></a></span>" +
+							"<span class='like'><img onclick='likePlus(" + i + ")' src='../images/like.png' alt='like' width='30px'/></span>" +
+							"<span class='hate'><img onclick='hatePlus(" + i + ")' src='../images/hate.png' alt='hate' width='30px' /></span>" +
+							"<div class='line2' align='center'><img  src='../images/line.jpg' alt='line' /></div>")
+							.appendTo(ul);
+			
+						  setFavor(i);
+					  }
+				}
+			},
+			  
+		  dataType: "json",
+		  async:false
+		});
 }
 
 
 
 function setFavor(index) {
-   $(document).ready(function () {
-       $.getJSON("../ajax/searchList/list.do?word=" + $("#wordTo").val(), function (result) {
-         var list = result.list;
-         
-         $.post("../ajax/myWord/exist.do", {
-            ano : list[index].ano
-         }, function(result) {
-            if (result.exist) {
-               $("a.favor" + index).addClass("favorOn");
-            } else {
-               $("a.favor" + index).addClass("favorOff");
-            }
-         });
-      });
-   });
+	$(document).ready(function () {
+ 		$.getJSON("../ajax/searchList/list.do?word=" + $("#wordTo").val(), function (result) {
+			var list = result.list;
+			
+			$.post("../ajax/myWord/exist.do", {
+				ano : list[index].ano
+			}, function(result) {
+				if (result.exist) {
+					$("a.favor" + index).addClass("favorOn");
+				} else {
+					$("a.favor" + index).addClass("favorOff");
+				}
+			});
+		});
+	});
 }
 
 function favorChange(index) {
-   $(document).ready(function () {
-      $.getJSON("../ajax/searchList/list.do?word=" + $("#wordTo").val(), function (result) {
-         var list = result.list;
-          if($("a.favor" + index).hasClass("favorOff")) {
-            $.post("../ajax/myWord/add.do", {
-               ano : list[index].ano
-            }, function(result) {
-               $("a.favor" + index).removeClass("favorOff");
-               $("a.favor" + index).addClass("favorOn");
-            });
-         
-         } else {
-            $.post("../ajax/myWord/delete.do", {
-               ano : list[index].ano
-            }, function(result) {
-               $("a.favor" + index).removeClass("favorOn");
-               $("a.favor" + index).addClass("favorOff");
-            });
-         }
-       });
-   });
+	$(document).ready(function () {
+		$.getJSON("../ajax/searchList/list.do?word=" + $("#wordTo").val(), function (result) {
+			var list = result.list;
+	 		if($("a.favor" + index).hasClass("favorOff")) {
+				$.post("../ajax/myWord/add.do", {
+					ano : list[index].ano
+				}, function(result) {
+					$("a.favor" + index).removeClass("favorOff");
+					$("a.favor" + index).addClass("favorOn");
+				});
+			
+			} else {
+				$.post("../ajax/myWord/delete.do", {
+					ano : list[index].ano
+				}, function(result) {
+					$("a.favor" + index).removeClass("favorOn");
+					$("a.favor" + index).addClass("favorOff");
+				});
+			}
+	 	});
+	});
 }
 
 </script>

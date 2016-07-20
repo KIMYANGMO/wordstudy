@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link href="../css/magic-check.css" rel="stylesheet">
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="../css/default.css" />
+		<link rel="stylesheet" type="text/css" href="../css/multilevelmenu.css" />
+		<link rel="stylesheet" type="text/css" href="../css/component2.learn.css" />
+		<link rel="stylesheet" type="text/css" href="../css/animations.css" />
+		<script src="../js/modernizr.custom.learn.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='../css/txtProgress.css' rel='stylesheet' type='text/css'>
+<style>
+/*-----------------------------*/
+.loadingEffect{
+margin-top:20%;
+margin-left:40%;
+}
+ .tp {
+        font-family: "Roboto Condensed";
+    }
+ /*-----------------------------*/   
+body {
+	background-color: #9BC4D5 !important;
+}
+#headerdiv {
+	width: 100%;
+}
+
+
+#top {
+	position: relative;
+	width: 100%;
+	height: 150px;
+}
+
+/* menubar */
+.thumbnail {
+  position: absolute;
+  border-radius : 50%;
+ /*
+  left:50%;
+  margin: -170px -200px 0 200px; */
+}
+
+.change {
+  display: inline-block;
+}
+#dialog {
+  z-index: 9999;
+}
+.settingpro {
+	border-radius: 100%;
+}
+
+
+.menubar{
+ position: absolute;
+  right: 1%;
+  top: 30px;
+  width: auto;
+  height: auto;
+border:none;
+border:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+/* background: rgb(109,109,109); */
+height: 50px;
+width: auto;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: rgb(109,109,109);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(109,109,109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+border:0px;
+/* margin: 50px 0 0 0; */
+position:absolute;
+width:170px;
+z-index:9999; 
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(109,109,109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:170px;
+z-index:9999;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+#current {
+background-color: transparent;
+}
+
+
+.mypage {
+/*   
+  left: 50%;
+  width: 20%;
+  height: 50%;
+  position: relative;
+  margin: -10px 0 0 300px; */
+  width: 150px;
+  height: 50px;
+}
+
+.imgdiv {
+  position: absolute;
+/*   left:50%;
+  margin: -170px 50px 100px 150px; */
+}
+
+.name {
+  position: absolute;
+/*   left: 50%; */
+  margin: 0 0 0 40px; 
+  width: 80px;
+  color : black;
+}
+
+#bodydiv {
+	width: 940px;
+	color: black;
+	margin: 0 auto;
+}
+#hintdiv {
+	position: relative;
+	width: 940px;
+	height: 180px;
+	margin: 5px auto;
+}
+#answerdiv {
+	position: relative;
+	width: 940px;
+	height: 140px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	padding: 0 15px;
+}
+#submitdiv {
+	position: relative;
+	width: 940px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	padding-top: 25px;
+}
+
+#worddiv {
+	position: relative;
+	width: 940px;
+	height: 90px;
+}
+.lm_word {
+	padding: 0 15px;
+	
+	margin: 0 auto;
+}
+
+#assodiv {
+	position: relative;
+	width: 940px;
+	height: 140px;
+}
+#lm_asimgdiv {
+	float: left;
+}
+#lm_asimg {
+	padding: 5px;
+	width:170px;
+	height: 120px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#lm_assodiv {
+  float: left;
+	width: 650px;
+	height: 140px;
+}
+#lm_asso {
+	margin-left: 5px;
+	padding: 5px;
+	text-align: left;
+	line-height: 1.5em;
+}
+#lm_nhdiv {
+	float: right;
+	width: 120px;
+}
+#lm_nh {
+	margin-top:70px;
+	margin-bottom:55px;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+  outline: 0px !important
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+#submit_btn {
+	width: 70px;
+	margin: 0 auto;
+}
+.radio1 {
+	padding: 10px;
+	float: left;
+	width: 450px;
+}
+
+#trigger_effectdiv {
+	position: absolute;
+	top: -300px;
+}
+#bodywrapper {
+	width: 940px;
+	margin: 0 auto;
+
+}
+#springdiv {
+	position: absolute;
+	width: 940px;
+	left: 50%;
+	margin: 0 0 0 -470px;
+	top: 86px; 
+	border-bottom: 1px dashed black;
+}
+.pt-page {
+	height: auto;
+	width: 940px;
+	left: 50%;
+	margin: 0 0 0 -470px;
+	background: #ffffff;
+	border-top: 1px dashed black;
+}
+.pt-page-1 {
+	height: 491px;
+}
+</style>
+</head>
+<body>
+
+<div id="trigger_effectdiv">
+<div class="pt-triggers">
+	<button id="iterateEffects" class="pt-touch-button">Show next page transition</button>
+</div><!-- /triggers -->
+</div>
+<div id="headerdiv">
+	<div id="springdiv"><img src="../images/spring5.jpg"></div>
+	<div id="top">
+		<span id="threediv">
+	   <nav>
+	   	<ul>
+	     	<li><a href="../add/addasso.html" class="newfile-btn"><i></i><img src="../images/newfile.png" width="70"/><br></br><font size='3'>연상법 등록</font></a></li>
+	     	<li><a href="../learn/learnchoice.html" class="study-btn"><i></i><img src="../images/pencil.png" width="70"/><br></br><font size='3'>연상법 학습</font></a></li>
+	     	<li><a href="../myword/myword.html" class="profile-btn"><i></i><img src="../images/pro.png" width="70"/><br></br><font size='3'>나의 단어장</font></a></li>
+	     </ul>
+	   </nav>
+	   </span>
+   </div>	
+</div>
+<div id="pt-main" class="pt-perspective">
+<div class="pt-page pt-page-1">
+	<div class="loadingEffect">
+    <div class="textProgress html">
+        <span class="tp">READY GO! </span>
+        <span class="tp">READY GO! </span>
+     </div>   
+    </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/jquery.dlmenu.js"></script>
+<script src="../js/pagetransitions2.js"></script>
+
+
+<script>
+function clickotherbutton() {
+	$("#iterateEffects").click();
+}
+</script>
+
+	
+<script>
+loadPhoto();
+function loadPhoto() {	
+	$.getJSON("../ajax/member/list.do", function(result) {
+		var headerdiv = $('#headerdiv');
+		var pAndndiv = $('#pAndndiv');
+		var list = result.list;
+		
+		$("<div class='menubar'>").html("<ul>" + 
+				"<li><a href='#' id='current'><div class='mypage'><div class='imgdiv'><img class='thumbnail' src='" + list[0].photo + "' width='45' height='45'></div><div class='name'><font size='3'>" + list[0].nick + "</font></div></div></a>" + 
+				"<ul><li><a href='location:;'>받은좋아요 <img src='../images/mainlikewhite.png' width='20px' height='20px'><font align='right'> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>" + 
+				"<li><a data-toggle=\"modal\" href='#setting'>설정</a></li><li><a href='../auth/logout.do'>로그아웃</a></li></ul>" +
+				"</li></ul>").appendTo(headerdiv);
+		$('#sign').css("display", "none");
+		
+		$("<img src='" + list[0].photo + "' id='imgPreview' class='settingpro' width='100' height='100'>" +
+			"<h3 align='center'>" + list[0].nick + "<input id='inputfiles' type='file' name='photo'></input><img class='cameraimg' src='../images/cameraicon.png' width='30' height='30'></h3><br>").appendTo(pAndndiv);
+	})
+}
+</script>	
+	
+<script>
+	  
+loadQuestion();
+function loadQuestion() {
+	$.ajax({
+		  type: 'POST',
+		  url: "../ajax/learn/list.do",
+		  success: function(result) {
+			  var ptmain = $("#pt-main");
+				var list = result.list;
+					  for (i = 0; i < 10; i++) {
+						  $("<div class='pt-page'>").html(
+									"<div id='bodydiv'><div id='bodywrapper'>" +
+									"<div id='hintdiv'>" +
+									"<div id='worddiv'><div class='lm_word' align='center'><font size='7'><strong>" + list[i].word + "</strong></font></div></div>" +
+									"<div id='assodiv'>" +
+									"<div id='lm_asimgdiv'><div id='lm_asimg'><img src='" + list[i].assothumPath + "'/></div></div>" +
+									"<div id='lm_assodiv'><div id='lm_asso'><h4 style='line-height: 1.5;'>" + list[i].hint + "</h4></div></div>" +
+									"<div id='lm_nhdiv'><div id='lm_nh'><h5>다음 힌트 ></h5></div></div>" +
+									"</div>" +
+									"</div>" +
+									"<div id='answerdiv'>" +
+									"<div class='radio1'><input class='magic-radio' type='radio' name='radio' id='1' value='option'><label for='1'><font size='4'>1. " + list[i].examples[0] + "</font></label></div>" +
+									"<div class='radio1'><input class='magic-radio' type='radio' name='radio' id='2' value='option'><label for='2'><font size='4'>2. " + list[i].examples[1] + "</font></label></div>" +
+									"<div class='radio1'><input class='magic-radio' type='radio' name='radio' id='3' value='option'><label for='3'><font size='4'>3. " + list[i].examples[2] + "</font></label></div>" +
+									"<div class='radio1'><input class='magic-radio' type='radio' name='radio' id='4' value='option'><label for='4'><font size='4'>4. " + list[i].examples[3] + "</font></label></div>" +
+									"</div>" +
+									"<div id='submitdiv'>" +
+									"<div id='submit_btn'><button type='button' class='btn btn-info btn-circle btn-xl' onclick='clickotherbutton()'><i class='glyphicon glyphicon-ok'></i></button></div>" +
+									"</div>" +
+									"</div>").appendTo(ptmain);
+						  
+						  	PageTransition();
+					  }
+			},
+		  dataType: "json",
+		  async:false
+		});
+}
+</script>	
+	
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../js/txtProgress.js"></script>
+<script>
+atest ();
+    function atest () {
+    	/* for (var i = 0; i <= 100; i+=7){
+          $(".textProgress").data("animated", false).textProgress(i);
+    	} */
+    	$(".textProgress").data("animated", false).textProgress(100);
+    	setTimeout("clickotherbutton()", 2500); 
+    }
+</script>
+</body>
+</html>

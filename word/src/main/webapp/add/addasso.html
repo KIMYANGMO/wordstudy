@@ -4,14 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="../css/addassobootstrap.css">
 <link rel="stylesheet" type="text/css" href="../css/reset.css">
 <link rel="stylesheet" type="text/css" href="../css/common3.css">
-<link rel="stylesheet" type="text/css" href="../css/list7.css">
-<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/list16.css">
+<link rel="stylesheet" type="text/css" href="../css/component2.css" />
+<link rel="stylesheet" href="../css/addassostyle4.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/popupsettings.js"></script>
 <style>
 
 .assohint {
@@ -25,37 +31,37 @@
 .assotext {
    cursor: pointer;
 }
-   body {
+	body {
    background-color: #F9F6F1;
    }
-   #d1 {
-      position: relative;
-      min-width: 960px;
-      width: 100%;
-      height: 246px;
-      padding-bottom: 13%;
-      overflow: hidden;
-   }
-/*    #logodiv {
-      position: absolute;
-      top: 80px;
-      width: 400px;
-      height: 100px;
-      z-index: 2;
-      right: 50%;
-      margin: 0 -200px 0 0;
-   } */
+	#d1 {
+	   position: relative;
+	   min-width: 960px;
+	   width: 100%;
+	   height: 246px;
+	   padding-bottom: 13%;
+	   overflow: hidden;
+	}
+	#logodiv {
+	   position: absolute;
+	   top: 35px;
+	   width: 400px;
+	   height: 100px;
+	   z-index: 2;
+	   right: 50%;
+	   margin: 0 -200px 0 0;
+	}
 
   .d2 {
     min-width: 0; height:150px; right: 100px;
     position: relative;
   }
 
-
   .d3 {
     min-width: 0; height:150px; width:400px; left: 50%;
     position: relative;
-    margin: -178px 0 0 -209px;
+    left: 50%;
+    margin: -177px 0 0 -209px;
     background-color: white;
     border: 1px solid gray;
   }
@@ -107,8 +113,6 @@
     height: 41px;
     top: 5%;
     border: 1px gray solid;
-    background-position: 99% 2px;
-    background-repeat: no-repeat;
     background-color: white;
     font-size: 16px;
     font-weight: normal;
@@ -151,20 +155,24 @@
   
   .addbtndiv {
     position: absolute;
-    left: 50%;
-    margin: 35px 0 0 -270px;
+    right: 110%;
+    margin: 35px 0 0 0px;
     height: 100px;
   }
   
   .addbtndiv2 {
     position: absolute;
-    left: 50%;
-    margin: 35px 0 0 -80px;
+    right: -20%;
+    margin: 35px 0 0 0px;
     height: 100px;
   }
+  
+   #threediv {
+   z-index : 100;
+   }
  
    #addbtn {
-        width: 180px;
+   	  width: 180px;
       cursor: pointer;
       background: #242b33;
       padding: 8px 5px;
@@ -205,6 +213,7 @@
     position: absolute;
     top: 15%;
     left: 40%;
+    font-size: 30px;
     height: 147px;
     width: 230px;
     margin: 0 0 0 -100px;
@@ -228,24 +237,29 @@
    background: linear-gradient(left, rgba(36,43,51,0) 0%,rgba(36,43,51,0.8) 20%,rgba(36,43,51,1) 53%,rgba(36,43,51,0.8) 79%,rgba(36,43,51,0) 100%); 
   }
 
-   .thumbnail {
-     position: absolute;
-     border-radius : 50%;
-   }
+	.thumbnail {
+	  position: absolute;
+	  border-radius : 50%;
+	}
+	
+	.divbox {
+	  position: relative;
+	  width: 0px;
+	  left: 50%; 
+	  margin: 0 0 0 12px;
+	}
    
-   .divbox {
-    position: relative;
-    width: 0px;
+	#signinpop {
+    position: absolute;
+    top: 50%;
     left: 50%;
-    margin: 0 0 0 12px;
-   }
-   
-   
+    margin: -389px 0 0 -245px;
+	}
 </style>
 
 </head>
 <body>
-  <div id="d1">
+    <div id="d1">
      <span id="threediv">
      <nav>
        <ul>
@@ -262,30 +276,119 @@
 	   <input id="topsearch" name="word" type="text" value="search"  onfocus="this.value=''" onblur="if(this.value =='') this.value='search';"/>
 	   </form>
 	   </div>
-     <div class="menubar">
-       <ul>
-         <li><a href="#" id="current">
-           <div class="mypage">
-             <div class="imgdiv"><img class="thumbnail" src="https://d12hfz37g51hrt.cloudfront.net/assets/default/user/photo_small-eb39055bd595b4f8b1a0d54e41ecf088.jpg" width="45" height="45"></div>
-              <div class="name"><font size="3">김현지</font></div>
-          </div>
-             </a>
-           <ul>
-              <li><a href="location:;">받은좋아요 <img src="../images/mainlike.png" width="20px" height="20px"><font align="right"> &nbsp;&nbsp;&nbsp;&nbsp;110</font></a></li>
-              <li><a href="#">설정</a></li>
-              <li><a href="../auth/logout.do">로그아웃</a></li>
-          </ul>
-         </li>
-      </ul>
-       </div>
-     
-     <video autoplay loop poster="../images/strip.jpg" id="bgvid">
+
+
+
+
+	<!-- 설정 팝업! -->
+
+
+	<div class="modal" id="setting" aria-hidden="true"
+		style="display: none; z-index: 1050;">
+		<span id="signinpop">
+			<div class="modal-dialog modal-lg">
+
+				<div class="modal-body">
+					<section>
+						<div id="container_demo">
+							<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+							<a class="hiddenanchor" id="tosettings"></a> <a
+								class="hiddenanchor" id="todelete"></a>
+							<div id="wrapper">
+
+								<div id="settings" class="animate form">
+
+									<form id="settingForm" name="mysetting" autocomplete="on"
+										method='post'>
+										<div id=pAndndiv>
+											<!-- <img src="../images/profile.png" id="imgPreview" class="settingpro" width="100" height="100">
+										<h3 align="center">김현지  <input id="inputfiles" type="file" name="photo"></input><img class="cameraimg" src="../images/cameraicon.png" width="30" height="30"></h3><br> -->
+										</div>
+										<h1></h1>
+
+										<p>
+											<label for="useremail" class="youmail" data-icon="e">이메일</label>
+											<input id="setemail" name="email" required="required"
+												type="text" readonly="readonly" />
+										</p>
+
+										<p>
+											<label for="username" class="uname" data-icon="u">닉네임
+												변경</label> <input id="nickCheck" name="nickCheck" type="hidden" /> <input
+												id="nickBefore" name="nickBefore" type="hidden" /> <input
+												id="setnick" name="nick" required="required" type="text" />
+											<font name="ncheck" size="2" color="red"></font> <br>
+										</p>
+
+										<p>
+											<label for="password" class="youpasswd" data-icon="p">비밀번호
+												변경</label> <input id="localpassword" name="password"
+												required="required" type="password" placeholder="기존 비밀번호" />
+
+										</p>
+
+										<p>
+											<input id="setpassword" name="password" required="required"
+												type="password" placeholder="새 비밀번호" /> <font
+												name="prcheck" size="2" color="red"></font> <br>
+										</p>
+
+										<p>
+											<input id="setpassword_confirm" name="password"
+												required="required" type="password" placeholder="새 비밀번호 확인" />
+											<font name="pcheck" size="2" color="red"></font>
+										</p>
+										<p class="change_link" style="margin-top: 80px;">
+											<a href="#todelete" class="to_register" style="width: 78px;">회원탈퇴
+											</a>
+										</p>
+										<p class="change button">
+											<input id="change" name="changebtn" value="변경"
+												style="text-align: center;" readonly />
+										</p>
+									</form>
+								</div>
+
+
+								<div id="delete" class="animate form">
+									<form name="deletecheck" autocomplete="on">
+										<h1>회원탈퇴</h1>
+										<p>
+											<label for="deletepassword" class="youpasswd" data-icon="p">본인
+												확인을 위하여 비밀번호를 입력해 주세요</label> <input id="mailCheck" name="mailCheck"
+												type="hidden" /> <input id="deletepassword"
+												name="deletepassword" required="required" type="password" />
+										</p>
+										<p class="delete button">
+											<input id="deletebtn" value="탈퇴" style="text-align: center;"
+												readonly />
+										</p>
+										<p class="change_link">
+											<a href="#tosettings" class="to_register">설정</a>
+										</p>
+									</form>
+								</div>
+
+
+
+
+
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</span>
+	</div>
+
+
+
+  <video autoplay loop poster="../images/strip.jpg" id="bgvid">
      <source src="../images/search_back.mp4" type="video/mp4">
     </video>
      
      </div>
      
-<div class="divbox">
 
   <div class="d7">
    <div class="title" >
@@ -295,8 +398,10 @@
    </div>
    </div>
    
-   
+
    <form method="post" name="modalForm" id="assoDataForm" >
+   
+<div class="divbox">   
    <div class="d6">
      <div>
           <div class="form-group">
@@ -354,17 +459,38 @@
             </div>
             <div class="modal-footer">
               <wrapper id=wrapper class="second-wrapper" style="top:270px">
-                 <p class="login button">
-                    <input type="submit" class="submitbtn" id="assoaddbtn" value="확인"/>
-                 </p>
+	              <p class="login button">
+	              	<input type="submit" class="submitbtn" id="assoaddbtn" value="확인" style="position: relative; top: -270px;">
+	              </p>
               <wrapper>
             </div>
           </div>
         </div>
     </div>
+  </div>
 </div>
 </form>
-</div>
+
+	<script>
+	loadPhoto();
+	function loadPhoto() {	
+	$.getJSON("../ajax/member/list.do", function(result) {
+		var headerdiv = $('#d1');
+		var pAndndiv = $('#pAndndiv');
+		var list = result.list;
+		
+		$("<div class='menubar'>").html("<ul>" + 
+				"<li><a href='#' id='current'><div class='mypage'><div class='imgdiv'><img class='thumbnail' src='" + list[0].photo + "' width='45' height='45'></div><div class='name'><font size='3'>" + list[0].nick + "</font></div></div></a>" + 
+				"<ul><li><a href='location:;'>받은좋아요 <img src='../images/mainlikewhite.png' width='20px' height='20px'><font align='right'> &nbsp;&nbsp;&nbsp;&nbsp;"+ result.totLikes +"</font></a></li>" + 
+				"<li><a data-toggle=\"modal\" href='#setting'>설정</a></li><li><a href='../auth/logout.do'>로그아웃</a></li></ul>" +
+				"</li></ul>").appendTo(headerdiv);
+		$('#sign').css("display", "none");
+		
+		$("<img src='" + list[0].photo + "' id='imgPreview' class='settingpro' width='100' height='100'>" +
+			"<h3 align='center'>" + list[0].nick + "<input id='inputfiles' type='file' name='photo'></input><img class='cameraimg' src='../images/cameraicon.png' width='30' height='30'></h3><br>").appendTo(pAndndiv);
+	})
+}
+</script>
 <script>
  
     $(document).ready(function () {
@@ -392,25 +518,31 @@
   </script>
   <script>
   $("#assoDataForm").submit(function(event) {   
+<<<<<<< .mine
 	  event.preventDefault();
 	   var tagAssos = document.getElementById("assos").innerHTML;
 	   $("<input type='hidden' name='asso' value='" + tagAssos + "'>").html("").appendTo("#assos");
 	   $("<input type='hidden' name='hint' value='" + tagAssos + "'>").html("").appendTo("#assos");	  
 	   var fd = new FormData($(this)[0]);
+=======
+	   event.preventDefault();
+	  
+	   var fd = new FormData($(this)[0]);
+>>>>>>> .r178
      $.ajax({
-            url:"../ajax/searchList/add.do",
-            type:"POST",
-            data: fd,
-            async:true,
-            cache:false,
-            contentType:false,
-            processData:false,
+    	 	 url:"../ajax/searchList/add.do",
+    	 	 type:"POST",
+    	 	 data: fd,
+    	 	 async:true,
+    	 	 cache:false,
+    	 	 contentType:false,
+    	 	 processData:false,
          success: function(data) {
-               window.location.reload();
+     			 window.location.reload();
          }
        });
      return false;
-      });
+  	 });
 </script>
   
   <script type= "text/javascript">
@@ -442,8 +574,9 @@
 			document.getElementById("text"+index).setAttribute( 'class', 'assomean');
 			document.getElementById("text"+index).setAttribute( 'onClick','changeValue4(' + index + ')');	  	
       });	  
-    }
-</script>
+
+  </script>
+
 <script type= "text/javascript">
   function changeValue4(index){		
 	  $(document).ready(function () {	  	
@@ -454,83 +587,85 @@
 </script>
  <script>
  function loadMean() {
-    $(document).ready(function () {
-    console.log($("#search").val());   
-    // Ajax 통신으로 서버에 Data를 전송하고 Return 받습니다.
-       $.ajax({
-           // type을 설정합니다.
-           type: 'POST',
-           url: "../ajax/searchList/word.do",
-           data: {
-              word : $("#search").val()
-              },
-              
-           // 성공적으로 값을 서버로 보냈을 경우 처리하는 코드입니다.
-           success: function (data) {
-              
-              $.getJSON("http://localhost:3000/parseword?word=" + $("#search").val(), function (result) {
-              
-                var divMeans1 = document.getElementById("Mean");
-                var divMeans3 = "<option selected='selected' id='MeansOption'>뜻</option>";
-                divMeans1.innerHTML = divMeans3;
-                console.log(result)
-              for (i=1; i < result.length; i++) {
-                 console.log(result[i]);
-                    divMeans3 += "<option>" + result[i].mean.substring(2, result[i].mean.length) + "</option>";                   
-                    divMeans1.innerHTML = divMeans3;
-              }
-                $.getJSON("../ajax/searchList/wordList.do", {
-                          word: result[0].word               
-                        }, function(results) {
-                          if (results.status == "success") {
-                             console.log(result[0].word + "는 DB에 있다");                  
-                          } else {
-                             console.log(result[0].word + "는 DB에 없다");
-                             wordAdd(result[0].word);
-                             wordMeanAdd(result[0].word);
-                          }
-                        }, "json"     
-                      );
-              
-              });
-           }
-       });
-    });
-   } 
+  	 $(document).ready(function () {
+	 console.log($("#search").val());   
+	 // Ajax 통신으로 서버에 Data를 전송하고 Return 받습니다.
+	    $.ajax({
+	        // type을 설정합니다.
+	        type: 'POST',
+	        url: "../ajax/searchList/word.do",
+	        // 사용자가 입력하여 id로 넘어온 값을 서버로 보냅니다.
+	        data: {
+	        	word : $("#search").val()
+	        	},
+	        	
+	        // 성공적으로 값을 서버로 보냈을 경우 처리하는 코드입니다.
+	        success: function (data) {
+	        	
+	        	$.getJSON("http://192.168.0.61:3000/parseword?word=" + $("#search").val(), function (result) {
+	        	
+	             var divMeans1 = document.getElementById("Mean");
+	             var divMeans3 = "<option selected='selected' id='MeansOption'>뜻</option>";
+	             divMeans1.innerHTML = divMeans3;
+	             console.log(result)
+	        	for (i=1; i < result.length; i++) {
+	        		console.log(result[i]);
+	                 divMeans3 += "<option>" + result[i].mean.substring(2, result[i].mean.length) + "</option>";                   
+	                 divMeans1.innerHTML = divMeans3;
+	        	}
+	        	  $.getJSON("../ajax/searchList/wordList.do", {
+	        			      word: result[0].word			      
+	        			    }, function(results) {
+	        			      if (results.status == "success") {
+	        			    	  console.log(result[0].word + "는 DB에 있다");			    	  
+	        			      } else {
+	        			    	  console.log(result[0].word + "는 DB에 없다");
+	        			    	  wordAdd(result[0].word);
+	        			    	  wordMeanAdd(result[0].word);
+	        			      }
+	        			    }, "json"	  
+	        			  );
+	        	
+	        	});
+	        }
+	    });
+	 });
+	} 
+
 </script>     
 <script>
 function wordAdd(word) {
-    $(document).ready(function () {
-        $.get("../ajax/searchList/wordAdd.do", {
-            word: word
-          }, function(result) {
-            if (result.status == "success") {
-              console.log(word);
-            } else {
-              /* window.alert("단어 등록 실패입니다!"); */
-            }
-            
-          }, "json"     
-        );
-          });
-      }
+	 $(document).ready(function () {
+		  $.get("../ajax/searchList/wordAdd.do", {
+		      word: word
+		    }, function(result) {
+		      if (result.status == "success") {
+		    	 console.log(word);
+		      } else {
+		        /* window.alert("단어 등록 실패입니다!"); */
+		      }
+		      
+		    }, "json"	  
+		  );
+	 		});
+		}
 </script>
 <script>
 function wordMeanAdd(word) {
-      $.getJSON("http://localhost:3000/parseword?word=" + word, function (result) {
-      for (i=1; i < result.length; i++) {         
-          $.get("../ajax/searchList/wordMeanAdd.do", {
-            word: word,
-            mean: result[i].mean.substring(2, result[i].mean.length)            
-          }, function(result) {
-            if (result.status == "success") {               
-               /* window.alert("단어뜻 등록 성공입니다!"); */               
-            } else {
-              /* window.alert("단어뜻 등록 실패입니다!"); */
-            }
-          }, "json"     
-        );}});
-      }
+		$.getJSON("http://192.168.0.61:3000/parseword?word=" + word, function (result) {
+		for (i=1; i < result.length; i++) {			
+			 $.get("../ajax/searchList/wordMeanAdd.do", {
+		      word: word,
+		      mean: result[i].mean.substring(2, result[i].mean.length)		      
+		    }, function(result) {
+		      if (result.status == "success") {		    	  
+		    	  /* window.alert("단어뜻 등록 성공입니다!"); */		    	  
+		      } else {
+		        /* window.alert("단어뜻 등록 실패입니다!"); */
+		      }
+		    }, "json"	  
+		  );}});
+		}
 </script>      
 </body>
 </html>

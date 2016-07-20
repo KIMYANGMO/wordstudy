@@ -170,7 +170,21 @@ video#bgvid {
       left: 50%;
       margin: 0 0 0 -240px;
     }
+    .assoEdit {
+    cursor: pointer;
+	 position: absolute;
+      top: 75px;
+      right: 13%;
+      margin: 0 0 0 -240px;
+    }
     
+    .assoDelete {
+	cursor: pointer;
+	 position: absolute;
+      top: 75px;
+      right: 10%;
+      margin: 0 0 0 -240px;
+}
     .word {
        position: absolute;
        top: 79px;
@@ -190,6 +204,7 @@ video#bgvid {
       top: 103px;
       left: 50%;
       margin: 0 0 0 -420px;
+      border-radius: 100%;
     }
     
     .cracker {
@@ -346,6 +361,20 @@ font-size: 36px;
     margin-left: 256px;
     margin-top: 14px;
 }
+
+#EditAsso-as_imgPreview {
+    padding: 10px;
+    position: absolute;
+    width: 160px;
+    height: 110px;
+    margin-left: 256px;
+    margin-top: 14px;
+}
+#EditAsso-inputFile {
+padding: 5px;
+height: 140px;
+width: 350px;
+}
 #inputFile {
 padding: 5px;
 height: 140px;
@@ -357,10 +386,27 @@ height: 40px;
 width: 420px;
 border: 1px solid gray;
 }
+#EditAsso-Means {
+padding : 10px;
+height: 40px;
+width: 420px;
+border: 1px solid gray;
+}
 #imgArea {
 border: 1px solid gray;
 }
-#message-text {
+
+#EditAsso-imgArea {
+border: 1px solid gray;
+}
+
+#EditAsso-message-text {
+height: 110px;
+width: 420px;
+border: 1px solid gray;
+}
+
+#message-text  {
 height: 110px;
 width: 420px;
 border: 1px solid gray;

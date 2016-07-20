@@ -23,8 +23,28 @@
   <insert id="insert" parameterType="SearchList">
     insert into assos(MENO, MNO, ASSO, A_PHOT, HINT, DATE, BEST, LIKES, HATES, FAVOR, A_THUM) 
     values((select MENO from MEANS where mean=#{mean} and word=#{word}), #{mno}, #{asso}, #{assophotPath}, #{hint}, now(), 'N', 0, 0, 'N', #{assothumPath});    
-  
   </insert>
+  
+  <update id="assoUpdate" parameterType="SearchList">
+  	<if test = "assophotPath == null">
+  	update assos set
+  	  MENO=(select MENO from MEANS where mean=#{mean} and word=#{word}),  
+  	  ASSO=#{asso}, 
+  	  HINT=#{hint}, 
+  	  DATE=now() 
+  	  where ANO=#{ano};
+  	</if>
+  	<if test = "assophotPath != null">  
+  	update assos set
+  	  MENO=(select MENO from MEANS where mean=#{mean} and word=#{word}),  
+  	  ASSO=#{asso}, 
+  	  A_PHOT=#{assophotPath}, 
+  	  HINT=#{hint}, 
+  	  DATE=now(), 
+  	  A_THUM=#{assothumPath}
+  	  where ANO=#{ano};
+  	</if>
+  </update>
   
   <insert id="wordAdd" parameterType="SearchList">
     insert into WORDS(word) 
@@ -38,44 +58,50 @@
   
   <insert id="myLOHAdd" parameterType="SearchList">        
     insert into my_loh(ano, mno) 
-    values((select ano from assos where asso=#{asso}), 
-    	  #{mno});
-    	  
+    values(#{ano}, 
+    	  #{mno});    	  
   </insert>
+  
+  <delete id="assoDelete" parameterType="SearchList">        
+    delete from assos where mno=#{mno} and ano=#{ano};
+  </delete>
   
   <select id="wordList" resultType="SearchList" parameterType="SearchList">
     select * from words where word=#{word}    
   </select>
   
   <select id="assoList" resultType="SearchList" parameterType="SearchList">
-    select * from my_LOH where mno=#{mno}
-    and ano=(select ano from assos where asso=#{asso})   
+    select * from my_LOH where ano=#{ano}   
   </select>
+
+  <delete id="assoListDelete" parameterType="SearchList">        
+    delete from my_LOH where ano=#{ano};
+  </delete>
 
   <select id="likes" resultType="Integer" parameterType="SearchList" >
     select likes from my_LOH where mno=#{mno}
-    and ano=(select ano from assos where asso=#{asso})   
+    and ano=#{ano};   
   </select>
     
   <select id="hates" resultType="Integer" parameterType="SearchList">
     select hates from my_LOH where mno=#{mno}
-    and ano=(select ano from assos where asso=#{asso})   
+    and ano=#{ano};   
   </select>
   
   <update id="hatesUpdate" parameterType="SearchList">
-    update assos set hates=hates+1 where asso=#{asso};
+    update assos set hates=hates+1 where ano=#{ano};
   </update>
   
   <update id="likesUpdate" parameterType="SearchList">
-    update assos set likes=likes+1 where asso=#{asso};
+    update assos set likes=likes+1 where ano=#{ano};
   </update>
   <update id="likesUpdateAdd" parameterType="SearchList">
     update my_loh set likes=1 where mno=#{mno}
-    and ano=(select ano from assos where asso=#{asso})
+    and ano=#{ano}
   </update>
   <update id="hatesUpdateAdd" parameterType="SearchList">
     update my_loh set hates=1 where mno=#{mno}
-    and ano=(select ano from assos where asso=#{asso})
+    and ano=#{ano}
   </update>
   <!--   
   <delete id="delete" parameterType="int">
@@ -84,7 +110,7 @@
   </delete> -->
  
   <select id="selectList" resultMap="SearchListMap" parameterType="map">
-    SELECT W.WORD, M.MEAN, A.ASSO, A.LIKES, A.HATES, A.A_PHOT, R.PHOT, A.FAVOR, R.NIC, A.DATE, A.A_THUM, A.ANO 
+    SELECT W.WORD, M.MEAN, A.ANO, A.ASSO, A.LIKES, A.HATES, A.A_PHOT, R.PHOT, A.FAVOR, R.NIC, A.DATE, A.A_THUM, A.ANO 
 		FROM WORDS W, MEANS M, ASSOS A, MEMBERS R
 		WHERE W.WORD = M.WORD
 		AND M.MENO = A.MENO
@@ -93,11 +119,9 @@
     order by A.LIKES DESC
   </select>
     
-  <!-- <select id="selectOne" resultMap="SearchListMap" parameterType="int">
-    select BNO, TITLE, CONTS, VWCNT, CDT 
-    from BOARDS
-    where BNO=#{no}
-  </select> -->
+  <select id="findAsso" resultType="int" parameterType="SearchList">
+    select ano from assos where mno=#{mno} and ano=#{ano}
+  </select> 
   
   <select id="countAll" resultType="int">
     select count(*) 

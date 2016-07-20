@@ -190,6 +190,7 @@ video#bgvid {
       top: 103px;
       left: 50%;
       margin: 0 0 0 -420px;
+      border-radius: 100%;
     }
     
     .cracker {
